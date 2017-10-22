@@ -1,0 +1,536 @@
+
+#left{
+	width: 208px;
+	border-right: 1px #E7E7EB solid;
+	float: left;
+}
+#left>ul>li{
+	width: 208px;
+	height: 56px;
+	border-bottom: 1px #E7E7EB solid;
+	font-size: 16px;
+	color: #666666;
+	line-height: 56px;
+	text-align: center;
+	cursor: pointer;
+}
+#left>ul>li.cur{
+	color: #00BFFF;
+}
+#right{
+	width: 940px;
+	float: left;
+	padding-top: 10px;
+	background: #fff;
+}
+#right>ul>li{
+	display: none;
+}
+#right>ul>li:nth-child(1){
+	display: block;
+}
+#right>ul>li>h2,#storevaluebg>h2,#facilitymanage>h2,#addfacility>h2{
+	font-size: 16px;
+	color: #666666;
+	line-height: 50px;
+}
+#right>ul>li>p,#storevaluebg>p,#addshop>p,#shopaccountno>p{
+	width: 890px;
+	height: 28px;
+	border-bottom: 1px #CCCCCC solid;
+	font-size: 16px;
+	color: #333333;
+	line-height: 28px;
+	padding: 15px 0 0 20px;
+}
+#right .poster{
+	margin-top: 15px;
+}
+#right .posterpic{
+	float: left;
+	margin-right: 50px;
+}
+#right .postertop{
+	width: 320px;
+	height: 40px;
+	background: url(../images/shop/postertop.png) no-repeat;
+	margin-left: 45px;
+	margin-bottom: 12px;
+}
+#right .posterleft{
+	width: 30px;
+	height: 342px;
+	float: left;
+	margin-right:15px;
+	background: url(../images/shop/posterleft.png) no-repeat;
+}
+#right .postermiddle{
+	width: 320px;
+	height: 340px;
+	float: left;
+	background: #D8D8D8;
+}
+#right .posterright{
+	width: 30px;
+	height: 342px;
+	float: left;
+	background: url(../images/shop/posterright.png) no-repeat;
+	margin-left: 15px;
+}
+#right .postercontent{
+	padding-top: 65px;
+	float: left;
+}
+#right .postermsg{
+	width: 420px;
+	height: 40px;
+	margin-top: 20px;
+}
+#right .postermsg>p{
+	width: 85px;
+	height: 40px;
+	float: left;
+	font-size: 14px;
+	color: #666666;
+	line-height: 40px;
+}
+#right .postermsg>input{
+	width: 280px;
+	height: 38px;
+	border: 1px #E7E7EB solid;
+	text-indent: 15px;
+}
+#right .postermsg>div{
+	width: 280px;
+	height: 38px;
+	background: url(../images/system/select.png) no-repeat 250px 16px;
+	float: left;
+	border: 1px #E7E7EB solid;
+	position: relative;
+}
+#right .postermsg>div>p{
+	font-size: 14px;
+	color: #666666;
+	line-height: 38px;
+	text-indent: 15px;
+	cursor: pointer;
+}
+#right .postermsg>div>ul{
+	width: 280px;
+	border: 1px #E7E7EB solid;
+	border-top: none;
+	z-index: 1;
+	background: #ffffff;
+	position: absolute;
+	top: 40px;
+	left: -1px;
+	display: none;
+}
+#right .postermsg>div>ul>li{
+	font-size: 14px;
+	color: #999999;
+	line-height: 40px;
+	text-indent: 15px;
+	cursor: pointer;
+}
+#right .postermsg>div>ul>li:hover{
+	background: #00bfff;
+	color: #ffffff;
+}
+#right .posterpublic>p{
+	height: 130px;
+	line-height: 130px;
+}
+#right .posterpublic>div{
+	width: 250px;
+	height: 98px;
+	padding: 20px 15px 10px;
+	background: none;
+	font-size: 14px;
+	color: #666666;
+	line-height: 22px;
+}
+#right .shopdetail{
+	width: 920px;
+	height: 40px;
+	margin-top: 15px;
+}
+#right .shopmsg{
+	float: left;
+}
+#right .shopmsg>p{
+	width: 85px;
+	height: 40px;
+	float: left;
+	font-size: 14px;
+	color: #333333;
+	line-height: 40px;
+}
+#right .shopmsg>div{
+	width: 228px;
+	height: 38px;
+	background: url(../images/system/select.png) no-repeat 198px 16px;
+	float: left;
+	border: 1px #E7E7EB solid;
+	position: relative;
+}
+#right .shopmsg>div>p{
+	font-size: 14px;
+	color: #333333;
+	line-height: 38px;
+	text-indent: 15px;
+	cursor: pointer;
+}
+#right .shopmsg>div .upper{
+	width: 10px;
+	height: 6px;
+	background: url(../images/shop/upper.png) no-repeat;
+	position: absolute;
+	top: 9px;
+	right: 10px;
+}
+#right .shopmsg>div .lower{
+	width: 10px;
+	height: 6px;
+	background: url(../images/shop/lower.png) no-repeat;
+	position: absolute;
+	bottom: 9px;
+	right: 9px;
+}
+#right .shopmsg>span{
+	margin: 0 10px;
+	float: left;
+	font-size: 14px;
+	color: #666666;
+	display: inline-block;
+	line-height: 40px;
+}
+#right .shopmsg>div>ul{
+	width: 228px;
+	border: 1px #E7E7EB solid;
+	border-top: none;
+	z-index: 1;
+	background: #ffffff;
+	position: absolute;
+	top: 40px;
+	left: -1px;
+	display: none;
+}
+#right .shopmsg>div>ul>li{
+	font-size: 14px;
+	color: #999999;
+	line-height: 40px;
+	text-indent: 15px;
+	cursor: pointer;
+}
+#right .shopmsg>div>ul>li:hover{
+	background: #00bfff;
+	color: #ffffff;
+}
+#right .shopmsg>input{
+	width: 258px;
+	height: 38px;
+	border: 1px #E7E7EB solid;
+	text-indent: 15px;
+}
+#right .shopstate>div{
+	width: 128px;
+	background-position: 100px 16px;
+}
+#right .shopstate>div>ul{
+	width: 128px;
+}
+#right .shopoperate{
+	width: 905px;
+	height: 40px;
+	margin-top: 20px;
+}
+#right .shopcheck{
+	width: 84px;
+	height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	background: #00bfff;
+	float: left;
+	border: none;
+}
+#right .shopadd{
+	width: 126px;
+	height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	background: #FFA508;
+	float: right;
+	border: none;
+	margin-left: 30px;
+}
+#right>ul>li table{
+	width: 905px;
+	border: 1px #CCCCCC solid;
+	border-bottom: none;
+	margin-top: 20px;
+}
+#right>ul>li table thead td,#right>ul>li table tbody td{
+	border-right: 1px solid #F4F5FA;
+	border-bottom: 1px #CCCCCC solid;
+	text-align: center;
+	font-size: 14px;
+	color: #333333;
+}
+#right>ul>li table tbody td{
+	padding: 15px;
+}
+#right>ul>li table thead td:nth-child(1){
+	width: 83px;
+}
+#right>ul>li table thead td:nth-child(2){
+	width: 109px;
+}
+#right>ul>li table thead td:nth-child(3){
+	width: 136px;
+}
+#right>ul>li table thead td:nth-child(4){
+	width: 139px;
+}
+#right>ul>li table thead td:nth-child(5){
+	width: 77px;
+}
+#right>ul>li table thead td:nth-child(6){
+	width: 174px;
+}
+#right>ul>li table thead td{
+	height: 38px;
+	background: #F4F5FA;
+}
+#right>ul>li table tbody td>p{
+	line-height: 30px;
+	text-align: left;
+}
+#right>ul>li table tbody td>p img{
+	margin-left: 15px;
+}
+#right>ul>li table tbody td>p>span{
+	float: right;
+}
+#right .shopbottom{
+	margin-top: 20px;
+}
+#right .pagenumber{
+	font-size: 14px;
+	color: #999999;
+	line-height: 36px;
+	float: right;
+	margin-right: 40px;
+}
+#right .pagenumber>span{
+	color: #00bfff;
+	margin: 0 5px;
+}
+#right .shopbottom>ul{
+	float: right;
+	overflow: hidden;
+}
+#right .shopbottom>ul>li{
+	width: 36px;
+	height: 34px;
+	border: 1px solid #cccccc;
+	font-size: 14px;
+	color: #333333;
+	line-height: 34px;
+	text-align: center;
+	float: left;
+	margin-right: 10px;
+	cursor: pointer;
+}
+#right .shopbottom>ul>li.cur{
+	color: #00BFFF;
+}
+#right .shopbottom>ul>li.nextpage,#right .shopbottom>ul>li.prevpage{
+	width: 82px;
+	height: 34px;
+	border: 1px solid #CCCCCC;
+	font-size: 14px;
+	color: #999999;
+	line-height: 34px;
+	text-align: center;
+	float: left;
+	margin-right: 20px;
+}
+#right .shopbottom>ul>li.nextpage{
+	color: #333333;
+}
+#right .shopbottom>ul>li.prevpage{
+	margin-right: 10px;
+}
+#right .shopbottom>ul>li.nextpage>span{
+	font-family: "宋体";
+	margin-left: 5px;
+}
+#right .shopbottom>ul>li.prevpage>span{
+	font-family: "宋体";
+	margin-right: 5px;
+}
+#right .shopbottom>ul>li.pagejump{
+	width: 120px;
+	border: none;
+	color: #999999;
+}
+#right .shopbottom>ul>li.pagejump>span{
+	width: 36px;
+	height: 34px;
+	border: 1px solid #cccccc;
+	display: inline-block;
+	margin: 0 10px;
+	color: #333333;
+}
+#storevalue>h2,#addstorevalue>h2,#activitycode>h2,#addactivity>h2,#shopmanage>h2,#addshop>h2,#shopaccountno>h2{
+	font-size: 16px;
+	color: #333333;
+	line-height: 50px;
+}
+#right .save{
+	height: 40px;
+	margin-top: 20px;
+}
+#right .savebtn{
+	width: 84px;
+	height: 40px;
+	font-size: 16px;
+	color: #ffffff;
+	background: #00bfff;
+	margin-right: 20px;
+	border: none;
+}
+#right .canclebtn{
+	width: 82px;
+	height: 38px;
+	border: 1px #666666 solid;
+	background: none;
+	font-size: 16px;
+	color: #666666;
+	cursor: pointer;
+}
+#addshop .shopbasemsg{
+	width: 900px;
+	height: 375px;
+}
+#addshop .shopmap{
+	width: 875px;
+	height: 256px;
+	background: url(../images/shop/map.png) no-repeat;
+	overflow: hidden;
+	margin-left: 20px;
+}
+#right .shopdataupload{
+	margin-top: 20px;
+}
+#right .shopdataupload>dl{
+	float: left;
+	margin-right: 65px;
+}
+#right .shopdataupload>dl>dt{
+	width: 220px;
+	height: 130px;
+	background: url(../images/shop/shopdatapic.png) no-repeat;
+}
+#right .shopdataupload>dl>dd{
+	font-size: 14px;
+	color: #666666;
+	line-height: 34px;
+	text-align: center;
+}
+#right .shopaccount>dl{
+	float: left;
+}
+#right .shopaccount>dl>dt{
+	width: 18px;
+	height: 18px;
+	background: url(../images/shop/accountno.png) no-repeat;
+	float: left;
+	margin: 11px 15px;
+	cursor: pointer;
+}
+#right .shopaccount>dl.select>dt{
+	background: url(../images/shop/accountyes.png) no-repeat;
+}
+#right .shopaccount>dl>dd{
+	float: left;
+	font-size: 14px;
+	color: #666666;
+	line-height: 40px;
+}
+#right .shopmsgwrap{
+	width: 890px;
+	height: 40px;
+	margin-top: 20px;
+}
+#shopaccountno .bankmsg{
+	width: 900px;
+	height: 180px;
+}
+#shopaccountno .userdataupload{
+	overflow: hidden;
+}
+#shopaccountno .userdataupload>li:nth-child(1){
+	width: 900px;
+	height: 165px;
+}
+#addfacility .staffselectnav>li{
+	display: none;
+}
+#addfacility .staffselectnav>li:nth-child(1){
+	width: 890px;
+	height: 180px;
+	display: block;
+}
+#addfacility .staffselectnav>li:nth-child(2){
+	width: 890px;
+	height: 180px;
+}
+#addfacility .staffselectnav>li:nth-child(3){
+	width: 890px;
+	height: 60px;
+}
+#addfacility .staffselectnav>li:nth-child(4){
+	width: 890px;
+	height: 60px;
+}
+#right .editswitch{
+	width: 42px;
+	height: 18px;
+	display: inline-block;
+	margin-left: 15px;
+	position: relative;
+	cursor: pointer;
+}
+#right .editoff{
+	width: 42px;
+	height: 18px;
+	background: #9B9B9B;
+	border-radius: 9px;
+	position: absolute;
+	top: 3px;
+	left: 0;
+}
+#right .editslide{
+	width: 18px;
+	height: 18px;
+	background: #ffffff;
+	border-radius: 9px;
+	position: absolute;
+	top: 3px;
+	left: 0;
+}
+#right .editon{
+	width: 0;
+	height: 18px;
+	background: #00BFFF;
+	border-radius: 9px;
+	position: absolute;
+	top: 3px;
+	left: 0;
+}
+.content{
+	background: #fff;
+	padding-bottom: 30px;
+}

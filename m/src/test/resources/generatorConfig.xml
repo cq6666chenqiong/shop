@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+<!-- 驱动jar包，mssql使用jtds-1.2.jar,mysql使用mysql-connector-java-5.0.8-bin.jar -->
+<classPathEntry location="D:\mysql-connector-java-5.0.7.jar" />
+
+<context id="FreeCMS_Tables" targetRuntime="MyBatis3">
+
+    <!-- mysql配置 -->
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                    connectionURL="jdbc:mysql://114.215.223.220:3306/zhsj_yw"
+                    userId="root" password="qwe123QWE"/>
+
+    <javaTypeResolver>
+        <property name="forceBigDecimals" value="false" />
+    </javaTypeResolver>
+
+    <!-- model生成文件的存放位置 -->
+    <javaModelGenerator targetPackage="com.zhsj.m.model"
+                        targetProject="src/main/java">
+        <property name="enableSubPackages" value="true" />
+        <property name="trimStrings" value="true" />
+    </javaModelGenerator>
+
+    <!-- sqlmap生成文件的存放位置 -->
+    <sqlMapGenerator targetPackage="mybatis-mapping"
+                     targetProject="src/main/resources">
+        <property name="enableSubPackages" value="true" />
+    </sqlMapGenerator>
+
+    <!-- dao生成文件的存放位置 -->
+    <javaClientGenerator type="XMLMAPPER"
+                         targetPackage="com.zhsj.m.dao"
+                         targetProject="src/main/java">
+        <property name="enableSubPackages" value="true"/>
+    </javaClientGenerator>
+
+    <!-- 要生成的表 -->
+<!--    <table tableName="t_user" domainObjectName="TUser" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
+    <!--<table tableName="t_activites" domainObjectName="TActivites" enableCountByExample="false" enableUpdateByExample="false"
+                  enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
+    <!--<table tableName="t_activites_option" domainObjectName="TActivitesOption" enableCountByExample="false" enableUpdateByExample="false"
+                  enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
+    <!--<table tableName="t_lottery_record" domainObjectName="TLotteryRrecord" enableCountByExample="false" enableUpdateByExample="false"
+                  enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_member" domainObjectName="TMember" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_area" domainObjectName="TArea" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_brand" domainObjectName="TBrand" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_pack_way" domainObjectName="TPackWay" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+
+    <table tableName="t_pack_model_image" domainObjectName="TPackModelImage" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_product" domainObjectName="TProduct" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_product_category" domainObjectName="TProductCategory" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_product_image" domainObjectName="TProductImage" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_series" domainObjectName="TSeries" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_advertisement" domainObjectName="Tdvertisement" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_order" domainObjectName="TOrder" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_order_relation" domainObjectName="TOrderRelation" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_order_detail" domainObjectName="TOrderDetail" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="t_virtual_order" domainObjectName="TVirtualOrder" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+               <table tableName="t_income" domainObjectName="TIncome" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+        <table tableName="t_ship_fee_setting" domainObjectName="TShipFeeSetting" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+                  -->
+<!--    <table tableName="t_arrange_model_image" domainObjectName="TArrangeModelImage" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
+    <!--<table tableName="tb_account_bind_role" domainObjectName="AccountBindRole" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="tb_role_info" domainObjectName="RoleInfo" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="tb_role_bind_role" domainObjectName="RoleBindRole" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="tb_role_bind_channel" domainObjectName="RoleBindChannel" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="td_system" domainObjectName="SystemInfo" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
+    <table tableName="tb_channel_info" domainObjectName="ChannelInfo" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+
+</context>
+</generatorConfiguration>

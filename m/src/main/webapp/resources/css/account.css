@@ -1,0 +1,781 @@
+.content {
+    width: 1198px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+.nav_wrap{
+	width: 208px;
+	border-right: 1px solid #e7e8eb;
+	float: left;
+}
+.nav li{
+	width: 208px;
+    height: 56px;
+    background: #FFF;
+    font-size: 16px;
+    line-height: 65px;
+    text-align: center;
+    color: #666666;
+    border-bottom: 1px solid #E7E7EB;
+    cursor: pointer;
+}
+.nav li.first{
+	color: #00BFFF;
+}
+.nav_wrap h1{
+	cursor: pointer;
+}
+.main_wrap{
+	width: 950px;
+	float: left;
+	background: #fff;
+}
+.title{
+	height: 78px;
+	color: #333;
+	font-size: 16px;
+	line-height: 78px;
+}
+.account_balance{
+	height: 165px;
+}
+.balance{
+	height: 18px;
+    border-left: 2px solid #00bfff;
+    font-size: 16px;
+    text-indent: 21px;
+    line-height: 16px;
+    color: #333;
+    font-weight: bold;
+}
+.word1{
+	font-size: 14px;
+	margin-top: 22px;
+	text-indent: 21px;
+	color: #999;
+}
+.word2{
+	font-size: 14px;
+	margin-top: 22px;
+	text-indent: 21px;
+	color: #999;
+}
+.word2 span{
+	color: #333; 
+}
+.button{
+	margin-top: 16px;
+	height: 32px;
+}
+.recharge{
+	width: 106px;
+	height: 32px;
+	background: #08c1ff;
+	color: #ecfaff;
+	line-height: 32px;
+	text-align: center;
+	border: 1px solid #08c1ff;
+}
+.examine{
+	width: 114px;
+	height: 30px;
+	background: #fff;
+	color: #333;
+	line-height: 32px;
+	text-align: center;
+	border: 1px solid #ccc;
+	margin-left: 12px;
+}
+.statistics{
+	height: 18px;
+    border-left: 2px solid #00bfff;
+    
+}
+.word3{
+	float: left;
+	font-size: 16px;
+    text-indent: 21px;
+    line-height: 16px;
+    color: #333;
+    font-weight: bold;
+}
+.word4{
+	float: left;
+	font-size: 16px;
+	margin-left: 178px;
+    line-height: 16px;
+    color: #333;
+    font-weight: bold;
+}
+.list{
+	height: 125px;
+}
+.list_left{
+	width: 450px;
+	height: 125px;
+	border-right: 1px solid #cccccc;
+	float: left;
+}
+.deposit{
+	width: 104px;
+	height: 30px;
+	border: 1px solid #e7e7eb;
+	text-align: center;
+	line-height: 30px;
+	margin-top: 22px;
+	background: #fff;
+	margin-left: 20px;
+	color: #333;
+}
+.list1{
+	float: left;
+}
+.list2{
+	float: left;
+	margin-left: 120px;
+}
+.list_right{
+	float: left;
+}
+.list3{
+	float: left;
+	margin-left: 70px;
+}
+.list4{
+	float: left;
+	margin-left: 110px;
+}
+.settlement_account{
+	height: 21px;
+	border-bottom: 2px solid #e6e6e6;
+}
+.settlement_word{
+	font-size: 16px;
+    width: 100px;
+    height: 21px;
+    text-align: center;
+    border-bottom: 2px solid #00BFFF;
+    line-height: 10px;
+    color: #333;
+}
+.account_information{
+	height: 180px;
+}
+.account_data{
+	height: 16px;
+	margin-top: 22px;
+}
+.account_data_left{
+	width: 136px;
+	text-indent: 20px;
+	font-size: 14px;
+	color: #333;
+	float: left;
+}
+.account_data_right{
+	float: left;
+	font-size: 14px;
+	color: #333;
+}
+.information1{
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 20px;
+	position: relative;
+}
+.information1_left{
+	width: 83px;
+	color: #333;
+	font-size: 14px;
+	float: left;
+	line-height: 40px;
+}
+.input1{
+	float: left;
+	width: 320px;
+	height: 40px;
+	border: 1px solid #e7e7eb;
+	text-indent: 15px;
+	line-height: 40px;
+}
+.input4{
+	float: left;
+	width: 320px;
+	height: 40px;
+	border: 1px solid #e7e7eb;
+	text-indent: 15px;
+	line-height: 40px;
+	color: #999;
+}
+.input5{
+	float: left;
+	width: 320px;
+	height: 40px;
+	border: 1px solid #e7e7eb;
+	text-indent: 15px;
+	line-height: 40px;
+}
+.unit{
+	color: #333;
+    font-size: 14px;
+    float: left;
+    margin-left: 10px;
+    line-height: 40px;
+}
+.cash{
+	color: #999;
+    font-size: 14px;
+    float: left;
+    margin-left: 10px;
+    line-height: 40px;
+}
+.cash span{
+	margin-left: 10px;
+	color: #00BFFF;
+}
+.information2{
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 40px;
+	position: relative;
+}
+.information3{
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 80px;
+}
+.information6{
+	height: 50px;
+	margin-left: 30px;
+	margin-top: 80px;
+}
+.input2{
+	width: 112px;
+	height: 28px;
+	border: 1px solid #00BFFF;
+	margin-top: 5px;
+    text-align: center;
+    color: #00BFFF;
+    background: url(../images/account/img.png) no-repeat 96px 12px;
+    float: left;
+    line-height: 28px;
+    cursor: pointer;
+}
+.input3{
+	width: 112px;
+	height: 28px;
+	border: 1px solid #cccccc;
+	margin-top: 5px;
+    text-align: center;
+    color: #434343;
+    margin-left: 20px;
+    float: left;
+    line-height: 28px;
+    cursor: pointer;
+}
+.refer{
+	height: 32px;
+	margin-left: 30px;
+	margin-top: 80px;
+	margin-top: 20px;
+}
+.refer input{
+	width: 106px;
+	height: 32px;
+	background: #00BFFF;
+	color: #f8fdff;
+	text-align: center;
+	line-height: 32px;
+	display: block;
+	border: none;
+	cursor: pointer;
+}
+.refe{
+	height: 32px;
+	margin-left: 30px;
+	margin-top: 80px;
+	margin-top: 20px;
+}
+.refe input{
+	width: 106px;
+	height: 32px;
+	background: #00BFFF;
+	color: #f8fdff;
+	text-align: center;
+	line-height: 32px;
+	display: block;
+	border: none;
+	cursor: pointer;
+}
+.succeed{
+	width: 445px;
+	height: 250px;
+	background: rgba(0,0,0,0.5);
+	border-radius: 20px;
+	position: absolute;
+	top: 290px;
+    left: 32%;
+	display: none;
+}
+.succeed img{
+	margin-top:60px;
+	margin-left: 185px;
+}
+.succeed p{
+	font-size: 34px;
+	color: #fff;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 70px;
+}
+.attention1{
+	position: absolute;
+    top: 48px;
+    left: 90px;
+    color: #a1a1a1;
+    display: none;
+}
+.attention2{
+	position: absolute;
+    top: 48px;
+    left: 90px;
+    color: #a1a1a1;
+    display: none;
+}
+.attention3{
+	position: absolute;
+    top: 48px;
+    left: 90px;
+    color: #a1a1a1;
+}
+.information4{
+	height: 100px;
+	margin-left: 30px;
+	margin-top: 40px;
+}
+.information4_left{
+	width: 83px;
+	color: #333;
+	font-size: 14px;
+	float: left;
+	line-height: 40px;
+	position: relative;
+}
+.textarea{
+	width: 320px;
+	height: 100px;
+	border: 1px solid #e7e7eb;
+	resize : none;
+	text-indent: 15px;
+}
+.number{
+	position: absolute;
+    top: 280px;
+    left: 645px;
+    color: #8a8a8a;
+}
+.information5{
+	height: 40px;
+	margin-left: 30px;
+	margin-top: 20px;
+}
+.input6{
+	width: 138px;
+	height: 48px;
+	border: 1px solid #e7e7eb;
+    color: #4d4d4d;
+    float: left;
+    line-height: 48px;
+    cursor: pointer;
+}
+.input7{
+	width: 138px;
+	height: 48px;
+	border: 1px solid #e7e7eb;
+    color: #4d4d4d;
+    margin-left: 20px;
+    float: left;
+    line-height: 48px;
+    cursor: pointer;
+}
+.input6 img{
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.input7 img{
+	margin-left: 20px;
+	margin-right: 10px;
+}
+.w_pay{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.sweep_pay{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.w_head{
+	width: 100%;
+	height: 100px;
+	background: #fff;
+}
+.w_head img{
+	position: absolute;
+	top: 33px;
+	left: 46%;
+}
+.w_head span{
+	position: absolute;
+    top: 35px;
+    left: 49%;
+    font-size: 16px;
+    color: #333333;
+}
+.w_foot{
+	width: 100%;
+	height: 300px;
+	background: #e7e8eb;
+}
+.w_footer{
+	width: 1126px;
+	height: 700px;
+	background: #fff;
+	margin: 20px auto;
+	padding-top: 70px;
+	position: relative;
+}
+.w_price{
+	font-size: 58px;
+	color: #f00;
+	text-align: center;
+}
+.w_price span{
+	font-size: 30px;
+}
+.w_img{
+	margin: 0 auto;
+	margin-top: 50px;
+	display: block;
+}
+.w_left{
+	position: absolute;
+	top: 550px;
+	left: 0px;
+}
+.w_right{
+	position: absolute;
+	top: 550px;
+	right: 0px;
+}
+.line{
+	width: 910px;
+	height: 2px;
+	background: #e6e6e6;
+	margin: 0 auto;
+	margin-top: 110px;
+}
+.w_state{
+	width: 300px;
+	height: 81px;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.w_state img{
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+.w_state{
+	font-size: 20px;
+	color: #333333;
+	line-height: 32px;
+}
+.record{
+	height: 22px;
+	border-bottom: 2px solid #e6e6e6;
+}
+.record li{
+	font-size: 14px;
+    width: 80px;
+    height: 22px;
+    text-align: center;
+    line-height: 10px;
+    float: left;
+    cursor: pointer;
+    color: #333;
+}
+.record_color{
+	border-bottom: 2px solid #00BFFF;
+}
+.recordd{
+	height: 22px;
+	border-bottom: 2px solid #e6e6e6;
+}
+.recordd li{
+	font-size: 14px;
+    width: 106px;
+    height: 22px;
+    text-align: center;
+    line-height: 10px;
+    float: left;
+    cursor: pointer;
+    color: #333;
+}
+.recordd_color{
+	border-bottom: 2px solid #00BFFF;
+}
+
+/**/
+.deal_time{
+	height: 42px;
+	line-height: 42px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.deal_time div em{
+	display: block;
+	width: 45px;
+	height: 42px;
+	float: left;
+	text-align: left;
+	color: #333;
+	font-size: 14px;
+	font-style: normal;
+}
+.deal_time div .ts{
+	display: block;
+	width: 73px;
+	height: 40px;
+	float: left;
+	text-align: center;
+	color: #999;
+	font-size: 14px;
+	margin-left: 15px;
+	cursor: pointer;
+}
+.ti{
+	border:1px solid #CCCCCC;
+}
+.plug_in{
+	float: left;
+}
+.start_time{
+	float: left;
+	width: 190px;
+	height: 40px;
+	border:1px solid #CCCCCC;
+	margin-left: 25px;
+	position: relative;
+}
+.end_time{
+	float: left;
+	width: 190px;
+	height: 40px;
+	border:1px solid #CCCCCC;
+	background: url(../images/account/calendar.png) no-repeat 10px 9px;
+	position: relative;
+}
+.jg{
+	float: left;
+	font-style: normal;
+	margin-right: 5px;
+	margin-left: 5px;
+	font-size: 14px;
+}
+/*插件*/
+#divDate{
+	position: absolute;
+	left: -1px;
+	top: 41px;
+	z-index: 10;
+}
+#txtEndDateCalendar{
+	position: absolute;
+	left: 215px;
+	top:41px;
+	z-index: 10;
+}
+#txtBeginDate{
+	width: 100%;
+	height: 100%;
+	text-indent: 50px;
+	border:none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url(../images/account/calendar.png) no-repeat 10px 9px;
+}
+#txtEndDate{
+	width: 100%;
+	height: 100%;
+	text-indent: 50px;
+	border:none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background: url(../images/account/calendar.png) no-repeat 10px 9px;
+}
+/*插件*/
+.mold{
+	height: 42px;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+.mold_left{
+	width: 82px;
+	height: 42px;
+	font-size: 14px;
+	color: #333;
+	line-height: 42px;
+	float: left;
+}
+.mold_right{
+	width: 150px;
+	height: 40px;
+	border: 1px solid #e7e7eb;
+	float: left;
+	background: url(../images/account/pic.png) no-repeat 130px 18px;
+	text-indent: 15px;
+	line-height: 40px;
+	color: #999;
+}
+.demand{
+	height: 32px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.demand input{
+	width: 106px;
+	height: 32px;
+	background: #00BFFF;
+	color: #f8fdff;
+	text-align: center;
+	line-height: 32px;
+	display: block;
+	border: none;
+	cursor: pointer;
+}
+.particulars{
+	height: 18px;
+    border-left: 2px solid #00bfff;
+    font-size: 16px;
+    text-indent: 20px;
+    line-height: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 24px;
+}
+.particulars span{
+	font-size: 14px;
+	margin-left: 30px;
+	color: #00BFFF;
+	font-weight: normal;
+}
+.table{
+	width: 920px;
+	height: 170px;
+	text-align: center;
+	border: 1px solid #CCCCCC;
+	margin-top: 20px;
+}
+.table thead tr{
+	height: 40px;
+	background: #F4F5FA;
+}
+.table thead tr td{
+	height: 40px;
+	background: #F4F5FA;
+	font-size: 14px;
+	border-bottom: 1px solid #CCCCCC;
+}
+.table tbody tr td{
+	border-bottom: 1px solid #f4f5fa;
+	border-right: 1px solid #f4f5fa;
+}
+.page_wrap{
+	height: 36px;
+	margin-top: 20px;
+}
+.page1{
+	margin-left: 360px;
+	float: left;
+}
+.page2{
+	float: left;
+	color: #cdcdcd;
+	margin-left: 18px;
+}
+.page2 span{
+	margin-left: 15px;
+	width: 36px;
+	height: 32px;
+	border: 1px solid #cccccc;
+	display: block;
+	float: left;
+	text-align: center;
+	line-height: 32px;
+	margin-right: 10px;
+	color: #666;
+}
+.page2 em{
+	display: block;
+	float: left;
+	font-style: normal;
+	line-height: 32px;
+	color: #999;
+}
+.page2 i{
+	display: block;
+	float: left;
+	font-style: normal;
+	line-height: 32px;
+	color: #999;
+}
+.page3{
+	float: left;
+	margin-left: 35px;
+	line-height: 32px;
+}
+.page3{
+	margin-left: 6px;
+	color: #00BFFF;
+}
+.page1 li{
+	float: left;
+	width: 36px;
+	height: 32px;
+	border: 1px solid #cccccc;
+	margin-right: 10px;
+	text-align: center;
+	line-height: 32px;
+	color: #666;
+	cursor: pointer;
+}
+.prev{
+	width: 82px !important;
+	height: 32px !important;
+	border: 1px solid #cccccc;
+	color: #999 !important;
+	text-align: center;
+	line-height: 32px;
+}
+.next{
+	width: 82px !important;
+	height: 32px !important;
+	border: 1px solid #cccccc;
+	color: #333 !important;
+	text-align: center;
+	line-height: 32px;
+}
+.maxheight{
+	height: 366px;
+}
