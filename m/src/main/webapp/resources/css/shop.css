@@ -18,7 +18,7 @@
 	color: #00BFFF;
 }
 #right{
-	width: 940px;
+	width: 950px;
 	float: left;
 	padding-top: 10px;
 	background: #fff;
@@ -34,7 +34,7 @@
 	color: #666666;
 	line-height: 50px;
 }
-#right>ul>li>p,#storevaluebg>p,#addshop>p,#shopaccountno>p{
+#right>ul>li>p,#storevaluebg>p,#addshop>p,#shopaccountno>p,#addshop .shopdatauploadno>p{
 	width: 890px;
 	height: 28px;
 	border-bottom: 1px #CCCCCC solid;
@@ -166,6 +166,12 @@
 	color: #333333;
 	line-height: 40px;
 }
+#right .shopmsg>p.people{
+    width:104px;	
+}
+#right .shopmsg>p.peoples{
+    width:120px;	
+}
 #right .shopmsg>div{
 	width: 228px;
 	height: 38px;
@@ -173,6 +179,31 @@
 	float: left;
 	border: 1px #E7E7EB solid;
 	position: relative;
+}
+#right .shopaccount{
+	margin-top: 20px;
+}
+dl span{
+	color: red;
+}
+.p_first{
+	width: 890px;
+    height: 28px;
+    border-bottom: 1px #CCCCCC solid;
+    font-size: 16px;
+    color: #333333;
+    line-height: 28px;
+    float: left;
+    margin-top:30px;
+}
+.p_second{
+	width: 890px;
+    height: 28px;
+    border-bottom: 1px #CCCCCC solid;
+    font-size: 16px;
+    color: #333333;
+    line-height: 28px;
+    margin-top:50px
 }
 #right .shopmsg>div>p{
 	font-size: 14px;
@@ -212,7 +243,7 @@
 	z-index: 1;
 	background: #ffffff;
 	position: absolute;
-	top: 40px;
+	top: 39px;
 	left: -1px;
 	display: none;
 }
@@ -264,52 +295,52 @@
 	border: none;
 	margin-left: 30px;
 }
-#right>ul>li table{
+.table_one{
 	width: 905px;
 	border: 1px #CCCCCC solid;
 	border-bottom: none;
 	margin-top: 20px;
 }
-#right>ul>li table thead td,#right>ul>li table tbody td{
+.table_one thead td,.table_one tbody td{
 	border-right: 1px solid #F4F5FA;
 	border-bottom: 1px #CCCCCC solid;
 	text-align: center;
 	font-size: 14px;
 	color: #333333;
 }
-#right>ul>li table tbody td{
+.table_one tbody td{
 	padding: 15px;
 }
-#right>ul>li table thead td:nth-child(1){
+.table_one thead td:nth-child(1){
 	width: 83px;
 }
-#right>ul>li table thead td:nth-child(2){
+.table_one thead td:nth-child(2){
 	width: 109px;
 }
-#right>ul>li table thead td:nth-child(3){
+.table_one thead td:nth-child(3){
 	width: 136px;
 }
-#right>ul>li table thead td:nth-child(4){
+.table_one thead td:nth-child(4){
 	width: 139px;
 }
-#right>ul>li table thead td:nth-child(5){
+.table_one thead td:nth-child(5){
 	width: 77px;
 }
-#right>ul>li table thead td:nth-child(6){
+.table_one thead td:nth-child(6){
 	width: 174px;
 }
-#right>ul>li table thead td{
+.table_one thead td{
 	height: 38px;
 	background: #F4F5FA;
 }
-#right>ul>li table tbody td>p{
+.table_one tbody td>p{
 	line-height: 30px;
 	text-align: left;
 }
-#right>ul>li table tbody td>p img{
+.table_one tbody td>p img{
 	margin-left: 15px;
 }
-#right>ul>li table tbody td>p>span{
+.table_one tbody td>p>span{
 	float: right;
 }
 #right .shopbottom{
@@ -412,7 +443,10 @@
 }
 #addshop .shopbasemsg{
 	width: 900px;
-	height: 375px;
+	height: 320px;
+}
+#addshop .shopbasemsg.tops{
+	margin-top: 10px;
 }
 #addshop .shopmap{
 	width: 875px;
@@ -459,10 +493,12 @@
 	color: #666666;
 	line-height: 40px;
 }
+#right .shopdatauploadno{
+	margin-top: 60px;
+}
 #right .shopmsgwrap{
 	width: 890px;
-	height: 40px;
-	margin-top: 20px;
+	height: 60px;
 }
 #shopaccountno .bankmsg{
 	width: 900px;
@@ -533,4 +569,22 @@
 .content{
 	background: #fff;
 	padding-bottom: 30px;
+}
+#txtBeginDate{
+	background: url(../images/finance/calendar.png) no-repeat 2px;
+	text-indent: 29px;
+}
+#txtEndDate{
+	background: url(../images/finance/calendar.png) no-repeat 2px;
+	text-indent: 29px;
+}
+#divDate{
+	position: absolute;
+	top: 39px;left: 0px;
+	z-index: 99;
+}
+#txtEndDateCalendar{
+	position: absolute;
+	top: 39px;left: 44px;
+	z-index: 99;
 }

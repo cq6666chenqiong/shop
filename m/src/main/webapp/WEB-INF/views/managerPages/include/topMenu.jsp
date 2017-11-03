@@ -35,7 +35,6 @@
             dataType: "json",
             async: false,
             success: function (result) {
-                //alert(0);
                 $.each(result, function (index, value) {
                     var $option = $("<li><a url='views/account.html'>"+value.channelName+"</a></li>");
                     $("#menuUl").append($option);

@@ -12,6 +12,7 @@ public class RoleInfo extends BaseModel {
 
     private String roleDesc;
 
+    private Integer roleType;
 
     private Integer systemId;
 
@@ -56,6 +57,14 @@ public class RoleInfo extends BaseModel {
 
     public void setRoleDesc(String roleDesc) {
         this.roleDesc = roleDesc;
+    }
+
+    public Integer getRoleType() {
+        return roleType;
+    }
+
+    public void setRoleType(Integer roleType) {
+        this.roleType = roleType;
     }
 
     public Integer getSystemId() {

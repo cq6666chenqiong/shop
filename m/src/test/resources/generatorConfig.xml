@@ -92,7 +92,9 @@
            enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
     <table tableName="td_system" domainObjectName="SystemInfo" enableCountByExample="false" enableUpdateByExample="false"
            enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>-->
-    <table tableName="tb_channel_info" domainObjectName="ChannelInfo" enableCountByExample="false" enableUpdateByExample="false"
+    <table tableName="tb_merchant_fund_account" domainObjectName="MerchantFundAccount" enableCountByExample="false" enableUpdateByExample="false"
+           enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
+    <table tableName="tb_withdraw_record" domainObjectName="WithdrawRecord" enableCountByExample="false" enableUpdateByExample="false"
            enableDeleteByExample="false" enableSelectByExample="false"   selectByExampleQueryId="false"></table>
 
 </context>

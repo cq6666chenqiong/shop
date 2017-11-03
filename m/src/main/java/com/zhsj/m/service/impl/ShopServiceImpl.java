@@ -1,11 +1,15 @@
 package com.zhsj.m.service.impl;
 
+import com.zhsj.m.dao.MerchantExtendInfoDao;
 import com.zhsj.m.dao.MerchantInfoDao;
+import com.zhsj.m.model.MerchantExtendInfo;
 import com.zhsj.m.model.MerchantInfo;
 import com.zhsj.m.model.RoleInfo;
 import com.zhsj.m.service.ShopService;
+import com.zhsj.m.service.convert.impl.MerchantExtendInfoConvert;
 import com.zhsj.m.service.convert.impl.MerchantInfoConvert;
 import com.zhsj.m.util.page.PageBean;
+import com.zhsj.m.vo.MerchantExtendInfoVO;
 import com.zhsj.m.vo.MerchantInfoVO;
 import com.zhsj.m.vo.RoleInfoVO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +26,12 @@ public class ShopServiceImpl implements ShopService{
     @Autowired
     private MerchantInfoDao merchantInfoDao;
 
+    @Autowired
+    private MerchantExtendInfoDao merchantExtendInfoDao;
+
     private MerchantInfoConvert merchantInfoConvert = new MerchantInfoConvert();
+
+    private MerchantExtendInfoConvert merchantExtendInfoConvert=new MerchantExtendInfoConvert();
 
     @Override
     public MerchantInfoVO getById(Integer id) {
@@ -31,8 +40,9 @@ public class ShopServiceImpl implements ShopService{
     }
 
     @Override
-    public void save(MerchantInfo merchantInfo) {
+    public void save(MerchantInfo merchantInfo,MerchantExtendInfo merchantExtendInfo) {
         merchantInfoDao.insert(merchantInfo);
+        merchantExtendInfoDao.insert(merchantExtendInfo);
     }
 
     @Override
@@ -56,5 +66,22 @@ public class ShopServiceImpl implements ShopService{
         }
         page.setList(resultList);
         return page;
+    }
+
+    @Override
+    public List<MerchantInfoVO> getAllShopListByParentCode(String parentCode) {
+        List<MerchantInfoVO> returnValue = new ArrayList<MerchantInfoVO>();
+        List<MerchantInfo> shopList = merchantInfoDao.getAllShopListByParentCode(parentCode);
+        for (MerchantInfo temp : shopList) {
+            returnValue.add(merchantInfoConvert.toVO(temp));
+        }
+        return returnValue;
+    }
+
+
+    @Override
+    public MerchantExtendInfoVO getMerchantExtendByMerchantCode(String merchantCode) {
+
+        return merchantExtendInfoConvert.toVO(merchantExtendInfoDao.getMerchantExtendByMerchantCode(merchantCode));
     }
 }

@@ -13,19 +13,19 @@ a{ color:#333333; text-decoration:none;}
 
 /* 设置HTML5 - placeholder样式  */
 input[placeholder], [placeholder], *[placeholder] {
-	font-family:微软雅黑;
+   font-family:微软雅黑;
 }
 
 /* 设置HTML5 - 默认 placeholder样式  */
 input::-webkit-input-placeholder {
-	color: #999;
+  color: #999;
 }
 
 /* 文字超过一定长度变点点点 */
 .text_overflow{width:237px; white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
 
 /* 去除Chrome input焦点框框  */
-input{outline:none}
+input{outline:none} 
 
 /* 在全局样式中测试部分代码 */
 .content{
@@ -42,7 +42,6 @@ input{outline:none}
 	text-align: center;
 	color: #fff;
 }
-
 span.requiredField {
 	padding-right: 3px;
 	color: #ff6d6d;
@@ -50,4 +49,15 @@ span.requiredField {
 }
 .error{
 	color: #ff6d6d;
+}
+#pageForm select{
+	height:40px;
+	width:100%;
+	border:1px solid #E7E7EB;
+	padding-left:10px;
+	box-sizing: border-box;
+}
+#pageForm .laydate-icon{
+	height:40px;
+	text-indent: 20px;
 }

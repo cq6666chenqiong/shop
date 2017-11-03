@@ -435,6 +435,7 @@ ol>li.inquier>h3{
 }
 .tab tbody tr td.msg{
 	color: #00bfff;
+	cursor: pointer;
 }
 .tab tbody tr{
 	height: 85px;

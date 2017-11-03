@@ -5,148 +5,145 @@
 	<%@ include file="../include/header.jsp" %>
 	<link rel="stylesheet" href="${path}/resources/css/system.css">
 	<script src="${path}/resources/js/system.js"></script>
+	<script>
+		function setMerchantAccountStatus(merchantAccountId,status,tips){
+            window.wxc.xcConfirm('确定要'+ tips +'吗?', window.wxc.xcConfirm.typeEnum.confirm, {
+                title: '提示'
+                , onOk: function () {
+                    $.ajax({
+                        url: "${path}/merchant/merchantAccount/setMerchantAccountStatus",
+                        global: false,
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            merchantAccountId:merchantAccountId,
+                            status:status
+                        },
+                        async: false,
+                        success: function (result) {
+                            if (result.success) {
+                                window.wxc.xcConfirm("操作成功。", window.wxc.xcConfirm.typeEnum.success);
+                                window.setTimeout("window.location.reload()",2000);
+
+                            } else {
+                                window.wxc.xcConfirm(result.message, window.wxc.xcConfirm.typeEnum.error);
+                            }
+                        }
+                    });
+                },
+            });
+
+		}
+
+        function deleteMerchantAccount(merchantAccountId){
+            window.wxc.xcConfirm('确定要刪除吗?', window.wxc.xcConfirm.typeEnum.confirm, {
+                title: '提示'
+                , onOk: function () {
+                    $.ajax({
+                        url: "${path}/merchant/merchantAccount/delete",
+                        global: false,
+                        type: "POST",
+                        dataType: "json",
+                        data:{
+                            id:merchantAccountId
+                        },
+                        async: false,
+                        success: function (result) {
+                            if (result.success) {
+                                window.wxc.xcConfirm("操作成功。", window.wxc.xcConfirm.typeEnum.success);
+                                window.setTimeout("window.location.reload()",2000);
+
+                            } else {
+                                window.wxc.xcConfirm(result.message, window.wxc.xcConfirm.typeEnum.error);
+                            }
+                        }
+                    });
+                },
+            });
+
+        }
+
+        function toAddAccout(type) {
+            window.location.href="${path}/merchant/merchantAccount/toAddAccount?type="+type;
+        }
+        function toEditAccount(id,accountType) {
+            window.location.href="${path}/merchant/merchantAccount/toEditAccount?id="+id+"&type="+accountType;
+        }
+        function search(){
+            $("#pageForm").submit();
+		}
+	</script>
 </head>
 <body>
 	
 
 	<div class="right">	
 		<!-- 账号管理 -->
-		<div>
+		<div style="height: 830px;">
 			<div class="admin_top top">
 				<div class="admin_top">
 					<h2>账号管理</h2>
 				</div>
 				<div class="admin_bottom">
+					<form id="pageForm" action="${path}/merchant/merchantAccount/accountList" method="post">
+						<input type="hidden" name="pageNo" id="pageNo">
 					<ul  class="admin_bottom_nav">
-						<li>门店名称:<input type="text" placeholder="请输入门店名称"></li>
-						<li>手机号码:<input type="text" placeholder="请输入手机号称"></li>
-						<li>姓名:<input type="text" placeholder="请输入姓名"></li>
-						<li>账号类型:<input type="text" placeholder="商户">
+						<li>门店名称:<input type="text" name="shopName" id="shopName" placeholder="请输入门店名称" value="${searchCondition.shopName}"></li>
+						<li>手机号码:<input type="text" name="phone" id="phone" placeholder="请输入手机号称" value="${searchCondition.phone}"></li>
+						<li>姓名:<input type="text" name="name" id="name" placeholder="请输入姓名" value="${searchCondition.name}"></li>
+						<li>账号类型:&nbsp;&nbsp;
+							<select name="accountType" id="accountType" style="height:40px;width:150px;border:1px solid #E7E7EB;">
+								<option value="">--请选择--</option>
+								<option value="1" <c:if test="${searchCondition.accountType==1}">selected</c:if> >商户</option>
+							   <option value="2" <c:if test="${searchCondition.accountType==2}">selected</c:if>>门店</option>
+						    </select>
 							<div class="admin_bottom_select">
-								
+
 							</div>
 						</li>
 					</ul>
 					<div class="admin_bottom_box">
-						<div class="demand">查询</div>
-						<div class="new_shop ">新增门店账号</div>
-						<div class="new_admin">新增商户账号</div>
+						<div class="demand" onclick="search();">查询</div>
+						<div class="new_shop" onclick="toAddAccout(2);">新增门店账号</div>
+						<div class="new_admin" onclick="toAddAccout(1);">新增商户账号</div>
 					</div>
+					</form>
 					<table border="0" cellspacing="0" cellpadding="0" class="table">
 						<tr>
-							<th>手机号码</th>
-							<th>姓名</th>
-							<th>对应商户</th>
-							<th>支付接入</th>
+							<th>真实姓名</th>
+							<th>登陆账号</th>
 							<th>账号类型</th>
-							<th>管理门店数/1</th>
+							<th>所属角色</th>
+							<th>管理门店数/个</th>
+							<th>状态</th>
 							<th>操作</th>
 						</tr>
+						<c:forEach items="${pageBean.list}" var="merchantAccount">
 						<tr>
-							<td>6543298453</td>
-							<td>旧城</td>
-							<td>辣子鸡炒鸡店</td>
-							<td>微信支付</td>
-							<td>商户账号</td>
-							<td>10</td>
-							<td> <span>查看</span> <span>停用</span> <span>修改</span> <span>禁用</span></td>
+							<td>${merchantAccount.name}</td>
+							<td>${merchantAccount.account}</td>
+							<td>
+								<c:if test="${merchantAccount.accountType==1}">商戶</c:if>
+								<c:if test="${merchantAccount.accountType==2}">门店</c:if>
+							</td>
+							<td>${merchantAccount.roleNames}</td>
+							<td>shopNum</td>
+							<td>
+								<c:if test="${merchantAccount.status==0}">禁用</c:if>
+								<c:if test="${merchantAccount.status==1}">启用</c:if>
+							</td>
+							<td>
+								<c:if test="${merchantAccount.status==1}"><span onclick="setMerchantAccountStatus(${merchantAccount.id},0,'停用');">停用</span> </c:if>
+								<c:if test="${merchantAccount.status==0}"><span onclick="setMerchantAccountStatus(${merchantAccount.id},1,'启用');">启用</span> </c:if>
+								<span onclick="toEditAccount(${merchantAccount.id},${merchantAccount.accountType});">修改</span>
+								<span onclick="deleteMerchantAccount(${merchantAccount.id});">删除</span></td>
 						</tr>
+						</c:forEach>
 					</table>
+					<%@ include file="../include/page.jsp" %>
 				</div>
 			</div>
-			<div class="rgba"></div>
-			<div class="admin_wrap">
-				<div class="admin_new_admin">
-					<div class="admin_main">
-						<div class="admin_main_top">
-							<h2>账号管理 > 商户账号</h2>
-						</div>
-						<div class="admin_bottom">
-							<ul  class="admin_bottom_nav1">
-								<li class="admin_bottom_nav_one"><img src="../../images/system/img7.png" alt="">账户类型: <span>商户账号</span></li>
-								<li>手机号:<input type="text" placeholder="请输入您的手机号称"></li>
-								<li class="admin_bottom_nav_two">密码:<input type="text" placeholder="请输入您的密码"></li>
-								<li>姓名:<input type="text" placeholder="请输入您的姓名"></li>
-								<li>角色管理:<input type="text" placeholder="超级管理员">
-									<div class="admin_bottom_select dmin_bottom_select1">
-									
-									</div>
-								</li>
-							</ul>
-							<div class="admin_bottom_option">
-								<h2>选择门店</h2>
-								<div class="admin_bottom_option_box">
-									<div class="admin_bottom_option_top">
-										<div><img src="../../images/system/img8.png" alt=""></div>
-										<span>已选列表</span>
-										<span>已选中门(<a>1</a>)家</span>
-									</div>
-									<div class="admin_bottom_option_bottom">
-										<p><a>全选</a>北京内圈科技有限公司<a></a></p>
-									</div>
-									<ul class="role_set_nav admin_bottom_option_nav">
-										<li>
-											<img src="../../images/system/img6.png" alt="">
-											<a href="####">北京内圈科技有限公司</a>
-											<ul class="role_set_nav role_set_nav4 admin_bottom_option_nav1">
-												<li><a href="####">北京内圈科技有限公司</a></li>
-												<li><a href="####">北京内圈科技有限公司</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<span class="save">保存</span>
-						<span class="abolish">取消</span>
-					</div>
-				</div>
-				<div class="admin_new_admin1">
-					<div class="admin_main">
-						<div class="admin_main_top">
-							<h2>账号管理 > 门户账号</h2>
-						</div>
-						<div class="admin_bottom">
-							<ul  class="admin_bottom_nav1">
-								<li class="admin_bottom_nav_one"><img src="../../images/system/img7.png" alt="">账户类型: <span>门户账号</span></li>
-								<li>手机号:<input type="text" placeholder="请输入您的手机号称"></li>
-								<li class="admin_bottom_nav_two">密码:<input type="text" placeholder="请输入您的密码"></li>
-								<li>姓名:<input type="text" placeholder="请输入您的姓名"></li>
-								<li>角色管理:<input type="text" placeholder="超级管理员">
-									<div class="admin_bottom_select dmin_bottom_select1">
-									
-									</div>
-								</li>
-							</ul>
-							<div class="admin_bottom_option">
-								<h2>选择门店</h2>
-								<div class="admin_bottom_option_box">
-									<div class="admin_bottom_option_top">
-										<div><img src="../../images/system/img8.png" alt=""></div>
-										<span>已选列表</span>
-										<span>已选中门(<a>1</a>)家</span>
-									</div>
-									<div class="admin_bottom_option_bottom">
-										<p><a>全选</a>北京内圈科技有限公司<a class="pic2"></a></p>
-									</div>
-									<ul class="role_set_nav admin_bottom_option_nav">
-										<li>
-											<img src="../../images/system/img6.png" alt="">
-											<a href="####">北京内圈科技有限公司</a>
-											<ul class="role_set_nav role_set_nav4 admin_bottom_option_nav1">
-												<li><a href="####">北京内圈科技有限公司</a></li>
-												<li><a href="####">北京内圈科技有限公司</a></li>
-											</ul>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-						<span class="save">保存</span>
-						<span class="abolish">取消</span>
-					</div>
-				</div>
-			</div>
+
 		</div>
 	</div>
 

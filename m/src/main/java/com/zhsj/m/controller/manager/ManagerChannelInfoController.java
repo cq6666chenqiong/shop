@@ -47,7 +47,7 @@ public class ManagerChannelInfoController {
     @ResponseBody
     public String loadMenu(HttpServletRequest request) {
         List<MenuVO>menuList=new ArrayList<>();
-
+        System.out.println("go down");
         //获取登录用户信息
         List<ChannelInfo>parentList=channelInfoService.getParentChannelListBySystemId(SystemIdEnum.MERCHANT_PLATFORM.getCode());
         if (parentList!=null&&parentList.size()>0){

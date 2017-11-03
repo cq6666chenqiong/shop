@@ -36,6 +36,7 @@
                         dataType: "json",
                         data:{
                             id:$("#roleId").val(),
+                            roleType:$("#roleType").val(),
                             roleName:$("#roleName").val(),
                             roleDesc:$("#roleDesc").val(),
                             resourceIds:$("#resourceIds").val()
@@ -79,6 +80,12 @@
 					<p>基础设置</p>
 				</div>
 				<ul class="role_nav">
+					<li><span class="requiredField">*</span>角色类型:
+						<select name="roleType" id="roleType">
+							<option value="1" <c:if test="${roleInfo.roleType==1}">selected</c:if>>商户</option>
+							<option value="2" <c:if test="${roleInfo.roleType==2}">selected</c:if>>门店</option>
+						</select>
+					</li>
 					<li><span class="requiredField">*</span>角色名称: <input type="text" name="roleName" id="roleName" placeholder="请输入角色名称" value="${roleInfo.roleName}"> </li>
 					<li><span class="requiredField">&nbsp;</span>角色描述: <input type="text" name="roleDesc" id="roleDesc" placeholder="请输入角色描述" value="${roleInfo.roleDesc}"> </li>
 				</ul>

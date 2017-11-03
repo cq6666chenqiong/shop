@@ -1,5 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -12,9 +20,9 @@
 	<script type="text/javascript" src="${path}/resources/js/home.js"></script>
 	<script type="text/javascript" src="${path}/resources/js/echarts.min.js"></script>
 	<script src="${path}/resources/js/lyz.calendar.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="${path}/resources/time/js/laydate.js"></script>
 </head>
 <body>
-	
 	<div id="header"></div>
 	<div class="content">
 		<div class="main">
@@ -27,6 +35,7 @@
 				<img src="${path}/resources/images/2.png" alt="" style="float: right;margin-right: 18px;">
 				<p class="word2">2017-08-17</p>
 			</div>
+			
 			<div class="main2">
 				<a href="#" class="ab">今日经营概览</a>
 			</div>
@@ -117,32 +126,14 @@
 				</div>
 			</div>
 			<div class="main2">
-				<a href="#" class="ab">会员概况</a>
-			</div>
-			<div class="main5">
-				<div class="cnv">
-					<div class="cir" id="chartmain"></div>
-					<div class="put">详情</div>
-				</div>
-				<div class="cnv" style="margin-left: 5%;">
-					<div class="cir" id="chartmain1"></div>
-					<div class="put">详情</div>
-				</div>
-				<div class="cnv" style="margin-left: 5%;">
-					<div class="cir" id="chartmain2"></div>
-					<div class="put">详情</div>
-				</div>
-			</div>
-			<div class="main2">
 				<a href="#" class="ab">时段分析</a>
 			</div>
 			<div class="main6">
+			     
 				<div class="plug">
 					<div style="width:500px;height:42px;float:left;">
 					  <span style="float:left;line-height:55px;margin-right: 15px;">时间:</span>
-					  <input id="txtBeginDate" style="width:170px;padding:7px 10px;border:1px solid #E7E7EB;margin-right:18px;float:left;font-size:12px;margin-top:12px;" placeholder="开始日期"/>
-					  <span style="float:left;line-height:55px;">至</span>
-					  <input id="txtEndDate" style="width:170px;padding:7px 10px;border:1px solid #E7E7EB;float:left;font-size:12px;margin-left:18px;margin-top:12px;" placeholder="结束日期"/>
+					     <input id="timeDate" style="width:170px;padding:7px 10px;border:1px solid #E7E7EB;margin-right:18px;float:left;font-size:12px;margin-top:12px;" placeholder="开始日期"/>
 					</div>
 					<input type="button" id="query" value="查询">
 				</div>
@@ -171,7 +162,8 @@
 					</ul>
 				</div>
 				<div class="line">
-					<img src="${path}/resources/images/9.png" alt="" style="margin:auto;display: block;">
+					
+					<div id="main" style="margin:auto;height:500px;min-width:1200px"></div>
 				</div>
 				<div class="graph">
 					<p>
@@ -200,19 +192,69 @@
 	
 	<script>
 		$(function () {
-	        $("#txtBeginDate").calendar({
-	            controlId: "divDate",                                 // 弹出的日期控件ID，默认: $(this).attr("id") + "Calendar"
-	            speed: 200,                                           // 三种预定速度之一的字符串("slow", "normal", or "fast")或表示动画时长的毫秒数值(如：1000),默认：200
-	            complement: true,                                     // 是否显示日期或年空白处的前后月的补充,默认：true
-	            readonly: true,                                       // 目标对象是否设为只读，默认：true
-	            upperLimit: new Date(),                               // 日期上限，默认：NaN(不限制)
-	            lowerLimit: new Date("2011/01/01"),                   // 日期下限，默认：NaN(不限制)
-	            /*callback: function () {                               // 点击选择日期后的回调函数
-	                alert("您选择的日期是：" + $("#txtBeginDate").val());
-	            }*/
-	        });
-	        $("#txtEndDate").calendar();
+			var option = {
+				    title : {
+				        text: '',
+				        subtext: ''
+				    },
+				    tooltip : {
+				        trigger: 'axis'
+				    },
+				    calculable : true,
+				    xAxis : [
+				    	
+				        {
+				        	
+			        	 	
+				        	splitLine:{ show:true },
+				        	type : 'category',
+				            boundaryGap : false,
+				            data : ['周一','周二','周三','周四','周五','周六','周日']
+				        }
+				    ],
+				    yAxis : [
+				    	
+				        {   
+				        	axisTick:{
+				                show:false
+				            },
+				        	splitLine:{ show:true },
+				        	type : 'value'
+				        }
+				    ],
+				    series : [
+				        {
+				            name:'近24小时销售额',
+				            type:'line',
+				            smooth:true,
+				            itemStyle: {normal: {color:'#00BFFF',lineStyle:{color:'#00BFFF'},areaStyle: {type: 'default'}}},
+				            data:[10, 12, 21, 54, 260, 830, 710]  // ${machineCabinetlist}
+				        },
+				        {
+				            name:'昨天销售金额',
+				            type:'line',
+				            smooth:true,
+				            itemStyle: {normal: {color:'#8B8989',lineStyle:{color:'#8B8989'},areaStyle: {type: 'default'}}},
+				            data:[30, 182, 434, 791, 390, 30, 10]   // ${machineCabinetlist}
+				        },
+				        {
+				            name:'上周一销售金额',
+				            type:'line',
+				            smooth:true,
+				            itemStyle: {normal: {color:'#FF7F00',lineStyle:{color:'#FF7F00'},areaStyle: {type: 'default'}}},
+				            data:[1320, 1132, 601, 234, 120, 90, 20]   // ${machineCabinetlist}
+				        }
+				    ]
+				};
+				
+				var myChart = echarts.init(document.getElementById('main'));
+				myChart.setOption(option);
 	    });
+		
+		!function(){
+			laydate.skin('molv');//切换皮肤，请查看skins下面皮肤库
+			laydate({elem: '#timeDate'});//绑定元素
+		}();
 	</script>
 </body>
 </html>

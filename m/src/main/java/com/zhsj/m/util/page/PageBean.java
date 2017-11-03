@@ -35,9 +35,11 @@ public class PageBean {
     public int getTotalPage() {
         if(totalCount>0) {
             if (totalCount % pageSize == 0) {
+            	
                 return totalCount / pageSize;
             } else {
-                return (int) Math.ceil(new BigDecimal(totalCount).divide(new BigDecimal(pageSize)).doubleValue());
+                //return (totalCount / pageSize) + 1;
+            	return (int) Math.ceil(new BigDecimal(totalCount).divide(new BigDecimal(pageSize)).doubleValue());
             }
         }else{
             return 1;

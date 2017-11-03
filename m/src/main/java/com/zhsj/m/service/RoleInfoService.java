@@ -65,4 +65,11 @@ public interface RoleInfoService {
 
     public List<RoleInfoVO>getRoleInfoListByMerchantAccountId(Integer merchantAccountId);
 
+    /**
+     * 通过组织ID或商家id和账户类型获取角色列表
+     * @param foreignId
+     * @return
+     */
+    List<RoleInfoVO> getRolelListByForeignIdAndRoleType(Integer foreignId,Integer roleType);
+
 }

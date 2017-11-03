@@ -72,8 +72,8 @@ input{
 	color: #fff;
 	text-align: center;
 	line-height: 40px;
-	left: 310px;
-	bottom:46px;
+	left: 12px;
+    top: 228px;
 }
 .account_alter{
 	display: none;
@@ -83,10 +83,10 @@ input{
 	height: 38px;
 	border:1px solid #E7E7EB;
 	text-indent: 15px;
-	margin-left: 22px;
+	margin-left: 40px;
 }
 .account_bottom_nav>li:nth-child(3)>input{
-	margin-left: 36px
+	margin-left: 12px
 }
 .account_bottom_nav>li:nth-child(3)>img{
 	margin-left: 10px
@@ -116,6 +116,7 @@ input{
 	margin-top: 10px;
 }
 /*微信授权*/
+
 .accredit_buttom,.redelegation{
 	height: 430px;
 }
@@ -124,31 +125,37 @@ input{
 }
 .head_img{
 	width: 234px;
-	height: 88px;
-	margin-left: 250px;
-	margin-top: 80px;
+	height:40px;
+/*	margin-left: 250px;
+	margin-top: 80px;*/
 }
 .head_img>span{
 	font-size: 14px;
 	color: #333;
-	line-height: 88px;
-	padding-right: 62px;
+/*	line-height: 88px;
+*/	
+/*padding-right: 62px;
+*/	padding-left: 12px;
 }
 .appid{
-	margin-top: 30px;
-	margin-left:284px;
+	margin-top: 20px;
+	margin-left:12px;
 	color: #333;
+	font-size: 14px;
 }
 .appid>input,.app>input{
-	width: 298px;
+	width: 350px;
 	height: 38px;
 	border:1px solid #E7E7EB; 
-	margin-left: 66px;
+	margin-left: 30px;
 	text-indent: 15px;
 	background:#FDFDFD;
 }
 .app>input{
 	width: 350px;
+}
+.app_last{
+	margin-left:260px;
 }
 .img5,.pic5{
 	width: 96px;
@@ -165,12 +172,11 @@ input{
 	width: 126px;
 	height: 40px;
 	background: #5BAC26;
-	margin-left:348px;
+	margin-left:12px;
 	color: #fff;
 	font-size: 16px;
 	line-height: 40px;
 	text-align: center;
-	margin-top: 70px;
 }
 /*角色管理*/
 .role_top>h2>span{
@@ -186,9 +192,7 @@ input{
 	margin-right: 30px;
 	text-indent: 0;
 }
-.role_bottom{
-	height: 440px;
-}
+
 .table{
 	width: 906px;
 	border:1px solid #ccc;
@@ -196,6 +200,7 @@ input{
 	color: #333;
 	font-size: 14px;
 	margin-left:12px;
+	background: #fff;
 }
 .table>tbody>tr>th{
 	background: #F4F5FA;
@@ -214,6 +219,7 @@ input{
 	line-height: 85px;
 	padding: 0 8px;
 	text-align: center;
+	border-bottom: 2px solid #F4F5FA;
 }
 .table>tbody>tr>td>span{
 	padding: 0 2px;
@@ -265,7 +271,6 @@ input{
 	border-bottom:1px solid #ccc;
 }
 .role_set_nav_wrap{
-	padding:20px 0 88px 0;
 }
 .role_set_nav{
 	height: 100%;
@@ -274,22 +279,33 @@ input{
 	font-size: 14px;
 	color: #333;
 	text-indent: 12px;
-	padding:10px 0;
+	padding:6px 0;
+	margin-top: 2px;
 }
 .role_set_nav>li>img{
 	float: left;
     margin-left: 12px;
     margin-top: 4px;
+    margin-right: 10px;
 }
 .role_set_nav>li>a.pic2,.role_set_nav1>li>a.pic2{
 	background: url(../images/system/img2.png) no-repeat 0px 0px;
+}
+.role_set_last>li>a.pic2{
+	background: url(../images/system/img2.png) no-repeat 0px 0px;
+}
+.role_set_last>li:nth-child(5)>a{
+	    background: url(../images/system/img3.png) no-repeat 0px 29px;;
+}
+.role_set_last>li:nth-child(5)>a.pic2{
+	background: url(../images/system/img2.png) no-repeat 0px 23px;
 }
 .role_set_nav>li>a{
 	width: 116px;
     display: block;
     text-indent: 30px;
-    margin-left: 46px;
-    padding-right: 20px;
+    margin-left: 38px;
+    padding-right: 6px;
 	background: url(../images/system/img3.png) no-repeat 0px 0px;
 }
 .role_set_nav>li.role_set_nav_first{
@@ -298,17 +314,23 @@ input{
 .role_set_nav1{
 	margin-left: 30px;
 	margin-top: 2px;
-	display: none;
-}
+/*	display: none;
+*/}
 .role_set_nav2{
-	margin-left: 30px;
-	margin-top: 2px;
+	margin-left: 82px;
+	margin-top: 10px;
+	height: 30px;
+}
+.role_set_nav2>li{
+	float: left;
+	text-indent: 0px;
+    margin-left: 0px;
+        margin-left: -38px;
 }
 .role_set_nav1>li,.role_set_nav2>li,.role_set_nav4>li,.role_set_nav5>li,.role_set_nav6>li{
 	font-size: 14px;
 	color: #333;
 	text-indent:12px;
-	padding:11px 0 0 0;
 }
 .role_set_nav1>li>img,.role_set_nav2>li>img,.role_set_nav3>li>img,.role_set_nav4>li>img{
 	float: left;
@@ -316,16 +338,16 @@ input{
     margin-top: 4px;
 }
 .role_set_nav1>li>a,.role_set_nav2>li>a,.role_set_nav3>li>a,.role_set_nav4>li>a,.role_set_nav5>li>a,.role_set_nav6>li>a{
-	width: 120px;
+	width: 90px;
     display: block;
-    text-indent: 30px;
-    margin-left: 46px;
-    padding-right: 20px;
+    text-indent: 22px;
+    /*margin-left: 46px;
+    padding-right: 20px;*/
     background: url(../images/system/img3.png) no-repeat 0px 0px;
 }
 .role_set_nav2,.role_set_nav3{
-	display: none;
-}
+/*	display: none;
+*/}
 .role_set_nav3>li{
 	margin-left:30px;
 	font-size: 14px;
@@ -335,7 +357,8 @@ input{
 }
 .role_set_nav4,.role_set_nav5,.role_set_nav6{
 	margin-left:30px;
-	display: none;
+/*	display: none;
+*/	margin-top: 8px;
 }
 .role_set_main{
 	display: none;
@@ -373,7 +396,7 @@ input{
 /*账号管理*/
 .admin_bottom{
 	width: 100%;
-	height: 400px;
+	height: 324px;
 }
 .admin_bottom_nav{
 	width: 800px;
@@ -453,17 +476,21 @@ input{
 }
 
 .admin_new_admin,.admin_new_admin1{
-	width: 862px;
-	height: 570px;
+	width: 950px;
+	height: 640px;
 	background: #fff;
-	position: fixed;
-    top: 0;
+	float: right;
+	/*position:absolute;
+    top: 0;*/
 	display: none;
 }
 .admin_main{
-	width: 700px;
+	width: 100%;
 	height: 100%;
 	margin:auto;
+}
+.admin_bottom_nav1{
+	height: 180px;
 }
 .admin_bottom_nav1>li{
 	float: left;
@@ -473,6 +500,39 @@ input{
 	padding:10px 10px 10px 0;
 	position: relative;
 }
+.content_m{
+	width: 100%;
+	height: 66px;
+}
+.content_m>div{
+	width: 100%;
+	float: left;
+    font-size: 14px;
+    color: #333;
+    margin-left: 12px;
+    line-height: 40px;
+}
+.content_m>div>span>input{
+    margin-top: -25px;
+    display: none;
+}
+.content_m>div>span.checkbox{
+	border:1px solid #00bfff;
+	display: block;width: 15px;height: 15px;border: 1px solid #e7e7eb;float: left;    margin-top: 12px;margin-left: 18px;margin-right: 8px;
+}
+.content_m>div>span.checkbox_one{
+	border:1px solid #00bfff;
+}
+.content_m>p>a{
+	width: 100px;
+	height: 70px;
+    display: block;
+    line-height: 22px;
+    height: 70px;
+    font-size:14px;
+    text-indent: 20px;
+	background: url(../images/system/img3.png) no-repeat left 42px;
+}
 .admin_bottom_nav1>li:nth-child(1)>img{
 	padding: 0 10px 0 0;
 }
@@ -481,31 +541,26 @@ input{
 	margin-left: 20px;
 }
 .admin_bottom_nav1>li.admin_bottom_nav_one{
-	margin-right: 154px;
+	margin-right: 278px;
 }
 .admin_bottom_nav1>li.admin_bottom_nav_two{
 	margin-right: 30px;
 }
 .admin_bottom_nav1>li>input{
-	width: 198px;
+	width: 298px;
 	height: 38px;
 	text-indent: 15px;
     margin-left: 22px;
     border: 1px solid #E7E7EB;
 }
 .admin_bottom_nav1>li.admin_bottom_nav_two>input{
-    margin-left: 50px;
+    margin-left: 34px;
 }
-.admin_bottom_nav1>li:nth-child(4)>input{
-    margin-left: 36px;
+.admin_bottom_nav1>li:nth-child(3){
+    margin-right: 46px;
 }
-.admin_bottom_nav1>li:nth-child(5)>input{
-	width: 128px;
-    height: 38px;
-    border: 1px solid #E7E7EB;
-    text-indent: 15px;
-    margin-left: 22px;
-    background: url(../images/system/img1.png) no-repeat 100px center;
+.admin_bottom_nav1>li:nth-child(5){
+	
 }
 .admin_bottom_option{
 	width: 100%;
@@ -517,10 +572,18 @@ input{
 	line-height: 36px;
 	text-indent: 12px;
 }
+.admin_bottom_option>h2>span{
+	font-size: 14px;
+	color: #f12f2f;
+	line-height: 36px;
+	text-indent: 12px;
+	margin-left: 10px;
+	display: none;
+}
 .admin_bottom_option_box{
-	width: 600px;
+	width: 830px;
 	margin-left: 12px;
-	height: 210px;
+	height: 191px;
 	border:1px solid #E7E7EB;
     margin-bottom: 20px;
 }
@@ -537,14 +600,15 @@ input{
     color: #333;
     text-indent: 12px;
 }
-.admin_bottom_option_top>div{
+.admin_bottom_option_top>input{
 	float: left;
 	margin-top:10px;
 	margin-left: 10px;
-	width: 296px;
+	width: 414px;
 	height: 38px;
 	border:1px solid #E7E7EB;
-	margin-right: 22px;
+	margin-right: 44px;
+	background: url(../images/system/img8.png)no-repeat 374px center;
 }
 .admin_bottom_option_top>div>img{
 	float: right;
@@ -564,11 +628,30 @@ input{
 .admin_bottom_option_top>span:nth-child(3)>a{
 	color: red;
 }
+.admin_bottom_option_bottom{
+	width: 426px;
+	float:left;
+}
+.admin_bottom_option_right{
+	width: 400px;
+	float: right;
+	height: 130px;
+	overflow: auto;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #E7E7EB;;
+}
 .admin_bottom_option_bottom>p{
-	margin-left:274px;
+	margin-left:340px;
 	line-height: 40px;
 	font-size: 14px;
 	height: 40px;
+}
+.admin_bottom_option_right>p{
+	line-height: 40px;
+	font-size: 14px;
+	height: 40px;
+	text-indent: 40px;
 }
 .admin_bottom_option_bottom>p>img{
 	margin-right: 8px;
@@ -578,26 +661,60 @@ input{
 	height: 100%;
     display: block;
     text-indent: 30px;
-    padding-right: 20px;
+    padding-right: 44px;
     background: url(../images/system/img3.png) no-repeat 0px center;
     float: left;
 }
 .admin_bottom_option_bottom>p>a.pic2{
+	background: url(../images/system/img2.png) no-repeat 0px center;
+}
+.admin_bottom_option_right>p>a{
+	width: 53px;
+	height: 100%;
+    display: block;
+    text-indent: 30px;
+    background: url(../images/system/img3.png) no-repeat 0px center;
+    float: right;
+}
+.admin_bottom_option_right>p>a.pic2{
+	    float: right;
 	   background: url(../images/system/img2.png) no-repeat 0px center;
 }
 .admin_bottom_option_bottom>p>a:nth-child(2){
+	width: 38px;
 	float: right;
 	padding-right: 4px;
 }
 .admin_bottom_option_nav{
 	width: 100%;
-	height: 100%;
+	height: 107px;
 }
 .admin_bottom_option_nav>li>a,.admin_bottom_option_nav1>li>a{
-	width: 252px;
+	width: 748px;
     display: block;
     text-indent: 0px;
-    margin-left: 46px;
+    margin-left: 30px;
+    padding-right: 20px;
+    background: none;
+/*    background: url(../images/system/img3.png) no-repeat right 0px;
+*/}
+.as{
+	overflow:auto;
+	height:130px;
+	margin-top: 0px;
+}
+.admin_show{
+	margin-top: 10px;
+	overflow: auto;
+}
+.admin_show>li{
+	padding:10px 0;
+}
+.admin_show>li>a{
+	width: 748px;
+    display: block;
+    text-indent: 0px;
+    margin-left: 30px;
     padding-right: 20px;
     background: url(../images/system/img3.png) no-repeat right 0px;
 }
@@ -839,4 +956,150 @@ input{
 .content{
 	background: #fff;
 	padding-bottom: 30px;
+}
+.foot{
+	width: 545px;
+	height: 38px;
+	padding:20px 0;
+    margin: auto;
+}
+.foot>span{
+	display: block;
+	width: 36px;
+	height: 34px;
+	float: left;
+	margin-left: 10px;
+	border:1px solid #d1d1d1;
+	text-align: center;
+	line-height:34px;
+	color: #333;
+}
+.foot>span:nth-child(2){
+	color: #ff8407;
+}
+.foot>span.prev{
+	width: 82px;
+}
+.foot>span.prev:nth-child(1){
+	color: #d3d3d3;
+}
+.foot>div{
+	font-size: 14px;
+	color: #d3d3d3;
+	float: left;
+	width: 106px;
+	margin-left: 28px;
+	height: 100%;
+}
+.foot>div>p{
+	line-height: 38px;
+	width: 32px;
+	float: left;
+}
+.foot>div>span{
+	display: block;
+	float: left;
+	width: 36px;
+	height: 34px;
+	border:1px solid #d1d1d1;
+	text-align: center;
+	line-height:34px;
+	color: #333;
+	margin-right: 4px;
+}
+.foot>div:nth-child(7){
+	font-size: 14px;
+	color: #d3d3d3;
+	float: right;
+	width: 78px;
+	height: 100%;
+	margin-left: 0;
+}
+.foot>div:nth-child(7)>p{
+	width: 78px;
+}
+.foot>div:nth-child(7)>p>em{
+	color: #00bfff;
+	font-style: normal;
+	margin-left:4px;
+}
+.img5{
+	float: right;
+	margin-right: 48px;
+	margin-top: 18px;
+}
+.account_title{
+	width: 100%;font-size: 16px;color: #333;border-bottom: 1px solid #ccc;text-indent: 12px;height: 22px;line-height: 22px;
+}
+
+.account_one,.account_two{
+	width: 100%;
+	height: 20px;
+	font-size: 14px;
+	color: #333;
+	margin-left: 12px;
+	margin-top: 20px;
+}
+.account_one>a,.account_two>a{
+	width: 115px;
+	height: 20px;
+	margin-top:20px;
+    display: block;
+    text-indent: 30px;
+    padding-right: 92px;
+    float: left;
+    background: url(../images/system/img3.png) no-repeat 0px center;
+}
+.account_one>a:nth-child(1),.account_two>a:nth-child(1){
+	width: 100px;
+	background: none;
+	text-indent: 0;
+    padding-right: 0px;
+}
+.account_two>a{
+	padding-right: 10px;
+	width: 60px;
+}
+.account_two>a.pic2,.account_one>a.pic2{
+	background: url(../images/system/img2.png) no-repeat 0px center
+}
+.account_wrap{
+	height: 500px;
+}
+.account_bottom{
+	height: 226px;
+}
+.role_wrap .save{
+	width: 190px;
+	height: 40px;
+    margin-top: 20px;
+    background: none;
+}
+.role_wrap .savebtn {
+    width: 84px;
+    height: 40px;
+    font-size: 16px;
+    color: #ffffff;
+    background: #00bfff;
+    margin-right: 20px;
+    border: none;
+    float: left;
+    text-indent: 0px;
+    cursor: pointer;
+}
+.role_wrap .canclebtn {
+    width: 82px;
+    height: 38px;
+    border: 1px #666666 solid;
+    background: none;
+    font-size: 16px;
+    color: #666666;
+    cursor: pointer;
+    float: left;
+    text-indent: 0px;
+    cursor: pointer;
+}
+.role_wrap .foot {
+	float: right;
+    margin-right: 30px;
 }

@@ -1,22 +1,10 @@
-<!DOCTYPE html>
+<!doctype html>
 <%@ page language="java" pageEncoding="UTF-8" %>
-<%@ page contentType="text/html;charset=UTF-8" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
-<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
-<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>智慧商街商户端 - 门店信息管理</title>
-    <link rel="stylesheet" type="text/css" href="${path}/resources/css/reset.css">
+    <%@ include file="../include/header.jsp" %>
     <link rel="stylesheet" type="text/css" href="${path}/resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="${path}/resources/css/shop.css">
-    <script type="text/javascript" src="${path}/resources/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="${path}/resources/javascript/common.js"></script>
     <script type="text/javascript" src="${path}/resources/javascript/shop.js"></script>
 </head>
 <body>
@@ -24,6 +12,7 @@
 <div id="right">
     <ul>
         <li>
+            <!-- 终端设备管理 -->
             <div id="facilitymanage">
                 <h2>终端设备管理</h2>
                 <div class="shopdetail">
@@ -32,20 +21,28 @@
                         <input type="text" placeholder="请输入门店名称" style="width:228px">
                     </div>
                     <div class="shopmsg shopnumber" style="margin-left:15px">
-                        <p>门店编号：</p>
-                        <input type="text" placeholder="请输入门店单号" style="width:228px">
+                        <p>设备类型：</p>
+                        <div style="width:121px;background-position:88px 16px">
+                            <p>POS机</p>
+                            <ul style="width:121px">
+                                <li>POS机</li>
+                                <li>云打印机</li>
+                                <li>微收银</li>
+                                <li>商亿</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="shopoperate">
                     <input type="button" value="查询" class="shopcheck">
                     <input type="button" value="添加设备" class="shopadd addfacility" style="cursor:pointer">
                 </div>
-                <table border="0" cellspacing="0" cellpadding="0">
+                <table border="0" cellspacing="0" cellpadding="0" class="table_one">
                     <thead>
                     <td style="width:31px">序号</td>
                     <td style="width:93px">门店名称</td>
                     <td style="width:81px">设备名称</td>
-                    <td style="width:30px">款台编号</td>
+                    <td style="width:30px">设备类型</td>
                     <td style="width:47px">款台秘钥</td>
                     <td style="width:57px">放置位置</td>
                     <td style="width:88px">关联活动码/个</td>
@@ -88,6 +85,7 @@
                     </ul>
                 </div>
             </div>
+            <!-- 添加设备 -->
             <div id="addfacility" style="display:none">
                 <h2 style="margin-bottom:15px">活动码管理 > 添加活动码</h2>
                 <div class="shopmsg shopselect" style="width:890px;margin-left:20px">
@@ -113,6 +111,7 @@
                     </div>
                 </div>
                 <ul class="staffselectnav">
+                    <!-- 添加设备-POS机 -->
                     <li>
                         <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
                             <p style="width:100px">POS机名称：</p>
@@ -123,35 +122,38 @@
                             <input type="text" placeholder="请输入设备" style="width:298px">
                         </div>
                         <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
-                            <p style="width:100px">放置位置：</p>
+                            <p style="width:100px">设备位置：</p>
                             <input type="text" placeholder="请输入放置位置" style="width:298px">
                         </div>
                     </li>
+                    <!-- 添加设备-云打印机 -->
                     <li>
                         <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
                             <p style="width:100px">设备ID：</p>
                             <input type="text" placeholder="请输入设备ID" style="width:298px">
                         </div>
                         <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
-                            <p style="width:100px">设备秘钥：</p>
-                            <input type="text" placeholder="请输入设备秘钥" style="width:298px">
+                            <p style="width:100px">设备密钥：</p>
+                            <input type="text" placeholder="请输入设备密钥" style="width:298px">
                         </div>
                         <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
                             <p style="width:100px">放置位置：</p>
                             <input type="text" placeholder="请输入放置位置" style="width:298px">
                         </div>
                     </li>
+                    <!-- 添加设备-微收银 -->
                     <li>
-                        <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
+                        <!-- <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
                             <p style="width:100px">款台秘钥：</p>
                             <input type="text" placeholder="请输入款台秘钥" style="width:298px">
-                        </div>
+                        </div> -->
                     </li>
+                    <!-- 添加设备-商亿 -->
                     <li>
-                        <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
+                        <!-- <div class="shopmsg staffselect" style="width:890px;margin-top:20px;margin-left:20px">
                             <p style="width:100px">款台秘钥：</p>
                             <input type="text" placeholder="请输入款台秘钥" style="width:298px">
-                        </div>
+                        </div> -->
                     </li>
                 </ul>
                 <div class="save" style="float:left">

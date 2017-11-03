@@ -125,3 +125,133 @@
 	background: #fff;
 	padding-bottom: 30px;
 }
+/* 财务管理 => 交易查询 => 遮罩 Start */
+.back{
+	background: rgba(0,0,0,0.3);
+	position: absolute;
+	top: 0;
+	left: 0px;
+	z-index: 999;
+	width: 100%;
+}
+.middle,.middle_two,.middle_three{
+	width: 860px;
+	height: 300px;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	margin-left: -430px;
+	margin-top: -155px;
+	background: #fff;
+	border-radius: 14px;
+}
+.middle_top{
+	width: 860px;
+	height: 50px;
+	background: #EEEEEE;
+	border-radius: 14px 14px 0 0;
+}
+.middle_top>p{
+	line-height: 50px;
+	font-size: 18px;
+	color: #6E6E6E;
+	text-indent: 88px;
+	float: left;
+}
+.middle_top>img{
+	float: right;
+	margin-right: 45px;
+	margin-top: 15px;
+}
+.middle_m{
+	width: 700px;
+	height: 45px;
+	margin-top: 40px;
+	margin-left: 88px;
+	position: relative;
+}
+.middle_m>p{
+	float: left;
+	font-size: 14px;
+	color: #333;
+	line-height:30px; 
+}
+.middle_m>p>span{
+	margin-left: 20px;
+}
+.middle_mm{
+	width: 700px;
+	height: 45px;
+	margin-left: 88px;
+}
+.middle_mm>p{
+	float: left;
+	font-size: 14px;
+	color: #333;
+	line-height:40px; 
+}
+.middle_mm>input{
+	width: 200px;
+	height: 38px;
+	margin-left: 20px;
+	border: solid 1px #E7E7EB;
+	color: #999;
+	text-indent: 15px;
+}
+.middle_bottom{
+	position: absolute;bottom: 0;
+	left: 0;
+	width: 860px;
+	height: 58px;
+	background: #EEEEEE;
+	border-radius: 0 0 14px 14px;
+}
+.middle_bottom>p{
+	width: 110px;
+	height: 40px;
+	background: #08C1FF;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	margin: auto;
+	margin-top: 9px;
+	font-size: 14px;
+	cursor: pointer;
+}
+.middle_two>img,.middle_three>img{
+	margin-top: 40px;
+	display: block;
+	margin-left: 370px;
+}
+.middle_two>h3,.middle_three>h3{
+	font-size: 24px;
+	color: #333;
+	line-height: 55px;
+	text-align: center;
+}
+.middle_two>p,.middle_three>p{
+	text-align: center;
+	color: #666;
+	font-size: 13px;
+}
+.middletwo_bottom,.middlethree_bottom{
+	position: absolute;bottom: 0;
+	left: 0;
+	width: 860px;
+	height: 58px;
+	background: #EEEEEE;
+	border-radius: 0 0 14px 14px;
+}
+.middletwo_bottom>p,.middlethree_bottom>p{
+	width: 110px;
+	height: 40px;
+	background: #08C1FF;
+	color: #fff;
+	text-align: center;
+	line-height: 40px;
+	margin: auto;
+	margin-top: 9px;
+	font-size: 14px;
+	cursor: pointer;
+}
+/* 财务管理 => 交易查询 => 遮罩 End */

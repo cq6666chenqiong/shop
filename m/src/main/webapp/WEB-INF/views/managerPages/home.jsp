@@ -1,5 +1,13 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!doctype html>
+<%@ page language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix="sql" %>
+<c:set var="path" value="${pageContext.request.contextPath}"/>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -14,7 +22,6 @@
 	<script src="${path}/resources/js/lyz.calendar.min.js" type="text/javascript"></script>
 </head>
 <body>
-	
 	<div id="header"></div>
 	<div class="content">
 		<div class="main">
@@ -27,6 +34,7 @@
 				<img src="${path}/resources/images/2.png" alt="" style="float: right;margin-right: 18px;">
 				<p class="word2">2017-08-17</p>
 			</div>
+			
 			<div class="main2">
 				<a href="#" class="ab">今日经营概览</a>
 			</div>

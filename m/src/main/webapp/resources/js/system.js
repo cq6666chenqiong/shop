@@ -21,11 +21,57 @@ $(function(){
 	$(".role_set_nav li img").click(function(){
 		$(this).next().next().toggle()
 	})
-	$(".role_set_nav li a").click(function(){
+	$(".merchantAccountSelectShop li a").click(function(){
+		var shopIds="";
+		var selectedCount=0;
+		$(".admin_bottom_option_right p").remove();
 		$(this).toggleClass("pic2")
-	})
+        $(".role_set_nav li a").each(
+            function(){
+                if ($(this).attr('class')=="pic2") {
+                    selectedCount=selectedCount+1;
+                    var $pObj = $("<p>"+$(this).text()+"</p>");
+                    $(".admin_bottom_option_right").append($pObj);
+                    if (shopIds != "") {
+                        shopIds = shopIds + "," + $(this).attr("shopId");
+                    } else {
+                        shopIds = $(this).attr("shopId");
+                    }
+                }
+            }
+        );
+		$("#shopIds").val(shopIds);
+        $("#selectedCount").text(selectedCount);
+	});
+    $(".shopAccountSelectShop li a").click(function(){
+        var shopIds="";
+        //var selectedCount=0;
+        $(this).toggleClass("pic2");
+        $(this).parent().siblings().find("a").removeClass("pic2");
+
+        $(".role_set_nav li a").each(
+            function(){
+                if ($(this).attr('class')=="pic2") {
+                    //selectedCount=selectedCount+1;
+                    if (shopIds != "") {
+                        shopIds = shopIds + "," + $(this).attr("shopId");
+                    } else {
+                        shopIds = $(this).attr("shopId");
+                    }
+                }
+            }
+        );
+        $("#shopIds").val(shopIds);
+        //$("#selectedCount").text(selectedCount);
+    });
 	$(".role_set_main div span").click(function(){
 		$(this).toggleClass("window_i")
+	})
+	$(".admin_bottom_option_bottom>p>a").click(function(){
+		$(this).toggleClass("pic2")
+	})
+	$(".checkbox").click(function(){
+		$(this).toggleClass("checkbox_one").siblings().removeClass("checkbox_one")
 	})
 	//账号管理
 	$(".admin_bottom_nav>li>input:last").click(function(){
@@ -35,22 +81,29 @@ $(function(){
 		$(this).next(".admin_bottom_select").toggle()
 	})
 	$(".admin_bottom_box>div.new_admin").on("click",function(){
+		$(".admin_top").hide()
 		$(".admin_wrap").show()
 		$(".admin_new_admin").show()
-		$(".rgba").show()
+		// $(".rgba").show()
 	})
 	$(".admin_bottom_box>div.new_shop").on("click",function(){
+		$(".admin_top").hide()
+		$(".admin_new_admin").hide()
 		$(".admin_wrap").show()
 		$(".admin_new_admin1").show()
-		$(".rgba").show()
+		// $(".rgba").show()
 	})
 	$(".abolish").click(function(){
-		$(".admin_new_admin").hide()
+		$(".admin_wrap").hide()
 		$(".admin_new_admin1").hide()
-		$(".rgba").hide()
+		$(".admin_top").show()
+		// $(".rgba").hide()
 
 	})
 	$(".admin_bottom_option_bottom>p>a").click(function(){
+		$(this).toggleClass("pic2").siblings().removeClass("pic2")
+	})
+	$(".content_m>p>a").click(function(){
 		$(this).toggleClass("pic2").siblings().removeClass("pic2")
 	})
 	//支付配置

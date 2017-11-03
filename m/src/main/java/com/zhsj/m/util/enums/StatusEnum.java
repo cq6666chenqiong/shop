@@ -26,7 +26,7 @@ public enum StatusEnum implements java.io.Serializable{
         switch (type) {
             case 1:
                 return NORMAL;
-            case 2:
+            case 0:
                 return FROZEN;
         }
         return null;
@@ -35,7 +35,7 @@ public enum StatusEnum implements java.io.Serializable{
         switch (type) {
             case 1:
                 return "正常";
-            case 2:
+            case 0:
                 return "冻结";
         }
         return null;

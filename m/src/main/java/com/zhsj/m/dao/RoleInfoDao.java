@@ -29,7 +29,6 @@ public interface RoleInfoDao {
 
     public List<RoleInfo> getRolelListByForeignIdAndSystemId(@Param("foreignId") Integer foreignId,@Param("systemId") Integer systemId);
 
-
     /**
      * 查询
      *
@@ -49,4 +48,6 @@ public interface RoleInfoDao {
     public RoleInfo getByName(@Param("name")String name);
 
     public List<RoleInfo> getRoleInfoListByMerchantAccountId(@Param("merchantAccountId") Integer merchantAccountId);
+
+    public List<RoleInfo> getRolelListByForeignIdAndRoleType(@Param("foreignId") Integer foreignId,@Param("roleType") Integer roleType);
 }

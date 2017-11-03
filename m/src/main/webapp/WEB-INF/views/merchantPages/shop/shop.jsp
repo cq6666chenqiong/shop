@@ -16,8 +16,8 @@
     <link rel="stylesheet" type="text/css" href="${path}/resources/css/style.css">
     <link rel="stylesheet" type="text/css" href="${path}/resources/css/shop.css">
     <script type="text/javascript" src="${path}/resources/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" src="${path}/resources/javascript/common.js"></script>
-    <script type="text/javascript" src="${path}/resources/javascript/shop.js"></script>
+    <script type="text/javascript" src="${path}/resources/js/common.js"></script>
+    <script type="text/javascript" src="${path}/resources/js/shop.js"></script>
     <script type="text/javascript">
         function shopAdd(){
             location.href = "${path}/merchant/shopManage/shopAdd";
@@ -60,7 +60,7 @@
                         <input type="button" value="添加门店" class="shopadd" style="cursor:pointer" onclick="shopAdd();">
                     </div>
                     </form>
-                    <table border="0" cellspacing="0" cellpadding="0">
+                    <table border="0" cellspacing="0" cellpadding="0" class="table_one">
                         <thead>
                         <td>门店编号</td>
                         <td>门店名称</td>

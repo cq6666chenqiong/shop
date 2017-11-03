@@ -18,16 +18,18 @@
 				</div>
 				<div class="account_bottom">
 					<ul class="account_bottom_nav">
-						<li>商户名称:<span>${merchantInfo.name}</span></li>
+<%--					<li>商户名称:<span>${merchantInfo.name}</span></li>
 						<li>商户编号:<span>${merchantInfo.mchCode}</span></li>
-						<li>管理门店:<span>全部门店</span></li>
+						<li>管理门店:<span>全部门店</span></li>--%>
 						<li>登录账号:<span>${merchantAccount.account}</span></li>
 						<li>真实姓名:<span>${merchantAccount.name}</span></li>
+	                   <li>手机号码:<span>${merchantAccount.phone}</span></li>
 						<li>我的角色:<span>${roleNames}</span></li>
-						<li>路机器授权:<span>武川县老袁笨鸡莜面饭店一分店</span></li>
-						<li>手机号码:<span>${merchantAccount.phone}</span></li>
+						<%--<li>路机器授权:<span>武川县老袁笨鸡莜面饭店一分店</span></li>--%>
+
 					</ul>
-					<a href="${path}/merchant/merchantAccount/toEditMyAccountInfo" target="_self"><div class="account_icon">修改</div></a>
+					<%--<a href="${path}/merchant/merchantAccount/toEditMyAccountInfo" target="_self"><div class="account_icon">修改密码</div></a>--%>
+					<a href="${path}/merchant/merchantAccount/toUpdateMyPassword" target="_self"><div class="account_icon">修改密码</div></a>
 				</div>
 			</div>
 

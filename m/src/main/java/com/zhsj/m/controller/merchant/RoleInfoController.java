@@ -122,7 +122,7 @@ public class RoleInfoController implements Constants {
         }
         roleInfoVO.setSystemId(SystemIdEnum.MERCHANT_PLATFORM.getCode());
         roleInfoVO.setForeignId(Integer.valueOf(uInfo.getUserId()));
-        PageBean pageBean = (PageBean) this.roleInfoService.queryByPage(roleInfoVO);
+        PageBean pageBean = this.roleInfoService.queryByPage(roleInfoVO);
         //model.addAttribute("pageNo", pageNo);
         model.addAttribute("pageBean", pageBean);
         return "/merchantPages/system/roleList";

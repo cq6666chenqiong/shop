@@ -75,8 +75,10 @@
             // reinitIframe();
         })
         $(document).on('click','.nav_left li',function (){
+        	
             var thatUrl = $(this).attr('url');
-            $('.cont_wrap').html('<iframe src="'+ thatUrl +'" scrolling="no" id="UFrame"></iframe>');
+            var path = "${path}";
+            $('.cont_wrap').html('<iframe src="' + path + '/' + thatUrl +'" scrolling="no" id="UFrame"></iframe>');
             $(this).addClass('first').siblings().removeClass('first');
             console.log( thatUrl )
         })

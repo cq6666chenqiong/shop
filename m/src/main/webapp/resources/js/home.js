@@ -6,6 +6,7 @@ $(function(){
 		$(this).siblings().find(".bai").hide();
 		$(this).siblings().find(".lan").show();
 	})
+	/*
 	option = {
 	    tooltip : {
 	        trigger: 'item',
@@ -54,5 +55,7 @@ $(function(){
     myChart.setOption(option);
     myChart1.setOption(option);
     myChart2.setOption(option);
+    */
+	
 
 })

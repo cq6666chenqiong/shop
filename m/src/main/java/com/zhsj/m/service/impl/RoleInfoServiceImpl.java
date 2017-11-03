@@ -152,6 +152,16 @@ public class RoleInfoServiceImpl implements RoleInfoService {
         return returnValue;
     }
 
+    @Override
+    public List<RoleInfoVO> getRolelListByForeignIdAndRoleType(Integer foreignId, Integer roleType) {
+        List<RoleInfoVO> returnValue = new ArrayList<RoleInfoVO>();
+        List<RoleInfo> roleList = roleInfoDao.getRolelListByForeignIdAndRoleType(foreignId,roleType);
+        for (RoleInfo temp : roleList) {
+            returnValue.add(roleInfoConvert.toVO(temp));
+        }
+        return returnValue;
+    }
+
     /**
      * 按分隔符将数组元素分开，组成一个字符串
      * @param list

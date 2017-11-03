@@ -4,6 +4,7 @@ import com.zhsj.m.model.MerchantInfo;
 import com.zhsj.m.model.RoleInfo;
 import com.zhsj.m.util.db.DS;
 import com.zhsj.m.util.db.DynamicDataSource;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -65,4 +66,11 @@ public interface MerchantInfoDao {
     List<MerchantInfo> query(MerchantInfo merchantInfo);
 
     public Long queryCount(MerchantInfo merchantInfo);
+
+    /**
+     * 根据商户编号获取该商户的所有门店信息
+     * @param parentCode
+     * @return
+     */
+    List<MerchantInfo> getAllShopListByParentCode(@Param("parentCode") String parentCode);
 }

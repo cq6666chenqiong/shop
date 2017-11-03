@@ -9,7 +9,7 @@ $(function(){
 				.css({"background":"#fff","color":"#4c4c4c","border":"1px solid #ccc"})
 	})
 	$(".input1").keyup(function(){
-		$(".attention1").fadeIn(800)
+		//$(".attention1").fadeIn(800)
 	})
 	$(".input4").keyup(function(){
 		$(".attention2").fadeIn(800)
@@ -25,9 +25,9 @@ $(function(){
 	})
 	$(".refer input").click(function(){
 		$(".succeed").fadeIn(800).fadeOut(800)
-		$(".input1").val("")
-		$(".input4").val("")
-		$(".input5").val("")
+		//$(".input1").val("")
+		//$(".input4").val("")
+		//$(".input5").val("")
 	})
 
 	$(".input6").click(function(){
@@ -59,7 +59,24 @@ $(function(){
 
  	/**/
  	$(".ts").click(function(){
-		$(this).addClass("ti").siblings().removeClass("ti")
+        var timeType=$(this).attr("timeType");
+		$(this).addClass("ti").siblings().removeClass("ti");
+        $("#timeType").val(timeType);
+
+        if(timeType==1){
+        	$("#startTime").val($("#today").val());
+            $("#endTime").val($("#today").val());
+		}else if (timeType==2) {
+            $("#startTime").val($("#yesterday").val());
+            $("#endTime").val($("#yesterday").val());
+        }else if (timeType==3) {
+            $("#startTime").val($("#sevenDayStart").val());
+            $("#endTime").val($("#sevenDayEnd").val());
+        }else if (timeType==4) {
+            $("#startTime").val($("#monthStart").val());
+            $("#endTime").val($("#monthDayEnd").val());
+        }
+        //$("#pageForm").submit();
 	})
  	/**/
 

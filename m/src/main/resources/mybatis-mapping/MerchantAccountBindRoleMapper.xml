@@ -40,6 +40,11 @@
     delete from tb_merchant_account_bind_role
     where ID = #{id,jdbcType=INTEGER}
   </delete>
+
+  <delete id="deleteWithAccountId" parameterType="java.lang.Integer" >
+    delete from tb_merchant_account_bind_role where account_id=#{accountId,jdbcType=INTEGER}
+  </delete>
+
   <insert id="insert" parameterType="com.zhsj.m.model.MerchantAccountBindRole" >
     <!--
       WARNING - @mbggenerated
@@ -119,4 +124,11 @@
       create_time = #{createTime,jdbcType=TIMESTAMP}
     where ID = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getMerchantAccountBindRoleListByAccountId" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List" />
+    from tb_merchant_account_bind_role
+    where account_id=#{accountId}
+  </select>
 </mapper>

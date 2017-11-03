@@ -35,6 +35,7 @@
                         type: "POST",
                         dataType: "json",
                         data:{
+                            roleType:$("#roleType").val(),
                             roleName:$("#roleName").val(),
                             roleDesc:$("#roleDesc").val(),
                             resourceIds:$("#resourceIds").val()
@@ -75,8 +76,15 @@
 					<p>基础设置</p>
 				</div>
 				<ul class="role_nav">
+					<li><span class="requiredField">*</span>角色类型:
+						<select name="roleType" id="roleType">
+							<option value="1">商户</option>
+							<option value="2">门店</option>
+						</select>
+					</li>
 					<li><span class="requiredField">*</span>角色名称: <input type="text" name="roleName" id="roleName" placeholder="请输入角色名称"> </li>
 					<li><span class="requiredField">&nbsp;</span>角色描述: <input type="text" name="roleDesc" id="roleDesc" placeholder="请输入角色描述"> </li>
+
 				</ul>
 				<%--<div class="role_set">权限设置</div>--%>
 				<input type="hidden" name="resourceIds" id="resourceIds">
@@ -94,7 +102,7 @@
 					</table>
 				</div>
                     <input type="submit" value="保存" class="savebtn">
-                    <input type="button" value="取消"  onclick="window.location.href='${path}/merchant/roleInfo/list'" class="canclebtn">
+                    <input type="button" value="取消"  onclick="history.go(-1);" class="canclebtn">
                 </form>
 			</div>
 
